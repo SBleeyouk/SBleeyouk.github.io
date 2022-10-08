@@ -104,7 +104,9 @@ ul{
 }
 
 a{
-  color:rgba(237, 227, 0, 1);
+  color:black;
+  text-decoration-color: rgba(237, 227, 0, 1);
+  text-decoration-thickness: 2px;
 }
 
 footer{
