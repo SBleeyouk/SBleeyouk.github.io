@@ -1,9 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Titillium+Web:wght@300;700&display=swap');
 
+:root {
+  font-size: 16px;
+}
+@media (min-width: 800px) {
+  :root {
+    font-size: 16px;
+  }
+  .profile{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1000px) {
+  :root {
+    font-size: 18px;
+  }
+  .profile{
+    display: flex;
+    flex-direction: row;
+  }
+  .left{
+    flex: 50%;
+  }
+  .right{
+    flex: 50%;
+  }
+}
+
 *{
   margin:0;
   padding:0;
   font-family:'Titillium Web', sans-serif;
+}
+html{
+  font-size: 16px;
 }
 .container{
   width:100;
@@ -18,84 +49,96 @@
   padding: 20px;
   background-color: transparent;
   font-family: 'Gowun Dodum', sans-serif;
-  color:#413E04;
-}
-
-.main{
-  margin: 24px;
+  color:#000000;
 }
 
 .profile{
   align-items: center;
   text-align: center;
-  height: 80%;
-  padding-bottom:30px;
-  background-image: url(so-white.png);
-}
-
-.space-name{
-  text-align:center;
+  height: 100%;
 }
 
 .name{
   font-family: 'Titillium Web', sans-serif;;
-  font-size: 72px;
-  color:rgba(237, 227, 0, 1);
+  font-size: 1.2rem;
+  color:#000000;
   font-weight:700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
 }
 
 .introduction{
   padding-left:12%;
   padding-right:12%;
-  color:#413E04;
+  color:#000000;
+}
+
+.space-name{
+  padding-top: 1rem;
+  position: relative;
+}
+
+.title-img{
+  width: 60%;
+  margin: 0 auto;
+  height: auto;
+  text-align: center;
+  padding-top: 1rem;
+  z-index: -1;
 }
 
 .profile-img{
   width: 100%;
   margin: 0 auto;
   height: auto;
-  max-width: 180px;
   text-align: center;
+  padding-top: 0.5rem;
 }
 
 .intro{
-  padding-top: 20px;
-  font-size:12px;
+  font-size:1rem;
   
 }
 
 .now{
-  width: 100%;
   text-align: center;
-  color:#413E04;
+  color:#000000;
+  background-color:#F5EFDE;
 }
 
 ul{
   list-style:none;
   display:border-box;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  padding: 12px;
-  color:#413E04;
+  margin-bottom: 0.5rem;
+  padding: 1.2rem;
+  color:#000000;
+}
+
+.category{
+  font-size: 1.2rem;
+  font-weight:600;
+  padding-bottom: 0.5rem;
 }
 
 .work{
   display:flex;
   flex-basis: auto;
-  font-size: 16px;
-  padding-bottom: 12px;
+  font-size: 1rem;
+  padding-bottom: 0.7rem;
 }
 
 .now_list{
   list-style:none;
-  font-size: 16px;
-  padding-bottom: 12px;
+  font-size: 1rem;
+  padding: 1.2rem;
 }
 
 .year{
   width: 20%;
-  padding-right: 12px;
-  color:#413E04;
+  padding-right: 0.8rem;
+  color:#000000;
   opacity: 70%;
 }
 
@@ -104,15 +147,27 @@ ul{
 }
 
 a{
-  color:#413E04;
-  text-decoration-color: rgba(237, 227, 0, 1);
+  color:#000000;
+  text-decoration-color: #F4B301;
   text-decoration-thickness: 2px;
 }
 
 footer{
+  background-color: #F4B301;
   text-align: center;
-  padding:20px;
-  font-size:12px;
-  color:#413E04;
-  opacity: 70%;
+  padding:1.2rem;
+  font-size:0.8rem;
+  color:#000000;
+}
+
+.icon{
+  width: 1.5rem;
+}
+
+.sns{
+  padding: 0.5rem;
+}
+
+.italic{
+  font-style: italic;
 }
