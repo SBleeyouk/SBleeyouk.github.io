@@ -315,7 +315,7 @@ const Diagram = () => {
             <VideoBackground
                 src={
                     hoverSection === 'area1'
-                        ? 'src/circle1.mp4'
+                        ? 'https://storage.cloud.google.com/saetbyeol-images/circle1.mp4?authuser=1'
                     : hoverSection === 'area2'
                         ? 'src/circle2.mp4'
                     : hoverSection === 'area3'
