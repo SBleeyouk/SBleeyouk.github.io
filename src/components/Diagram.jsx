@@ -2,22 +2,32 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import Summary from './Summary';
-import { Title, TextH3 } from './Typo';
+import { Title, TextH3, HighlightedText } from './Typo';
 import Header from './Header';
+import CustomCursor from './cursor';
+import { FaArrowDown } from "react-icons/fa";
+
 
 const DiagramContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: #ff6035;
+  background-size: cover;
   position: relative;
 
   @media (max-width: 768px) {
     justify-content: flex-start;
   }
+  cursor: none, auto;
+  overflow: hidden;
 `;
+
+/*background-color: #ff6035;*/
+/*background-color: #ece8e8; background-image: url('./src/bg-5.png');  */
 
 const VennDiagram = styled.div`
   display: flex;
@@ -25,15 +35,40 @@ const VennDiagram = styled.div`
   height: 70%;
   aspect-ratio: 1;
   margin: auto;
-
   @media (max-width: 768px) {
     display: none; /* Hide on mobile */
   }
 `;
 
-const NameContainer = styled.div`
+const Description = styled.div`
+  width: 80%;
+  height: 10%;
   position: absolute;
-  bottom: 10%; /* Distance from the bottom of the page */
+  bottom: 8%;
+  text-align: center;
+  justify-content: top;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ece8e8;
+  font-family: 'PP Neue Montreal', sans-serif;
+`;
+
+const Name = styled.span`
+`;
+const Role = styled.span`
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+`;
+
+const RoleNot = styled.span`
+`;
+
+const Question = styled.span`
+  font-style: italic;
+`;
+
+/*
+const NameContainer = styled.div`
   text-align: center;
   color: white;
   font-family: 'Baskerville', serif;
@@ -41,23 +76,29 @@ const NameContainer = styled.div`
   font-size: 2.5rem;
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: visible;
 
   &:hover {
     transform: scale(1.1);
     opacity: 0.8;
-    color: #FFC800;
-
+    color: #215CFA;
   }
+`;
+*/
+
+const DynamicPart = styled.span`
+  font-style: italic;
+  color: #ece8e8;
 `;
 
 const DashedLine = styled.div`
   position: absolute;
   width: 1px;
-  height: 35%; /* Adjust height as needed */
+  height: 32%; /* Adjust height as needed */
   background: repeating-linear-gradient(
     to bottom,
-    white 0%,
-    white 50%,
+    #ece8e8 0%,
+    #ece8e8 50%,
     transparent 50%,
     transparent 100%
   );
@@ -73,7 +114,9 @@ const Circle = styled.div`
   width: 50%;
   height: 50%;
   border-radius: 50%;
-  border: 1px dashed white;
+  border: 1px dashed #ece8e8;
+
+  box-shadow:  20px 20px 49px rgba(255, 255, 255, 0.1), -20px -20px 49px rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.1);
   z-index: 1;
 
@@ -108,7 +151,7 @@ const Circle = styled.div`
     & > div {
       position: absolute;
       top: 40%;
-      left: 40%; /* Moves text 30% to the left within the circle */
+      left: 35%; /* Moves text 30% to the left within the circle */
       text-align: center;
       width: 60%;
     }
@@ -123,7 +166,7 @@ const Circle = styled.div`
     & > div {
       position: absolute;
       top: 40%;
-      right: 50%; /* Moves text 30% to the right within the circle */
+      right: 45%; /* Moves text 30% to the right within the circle */
       text-align: center;
     }
   }
@@ -131,14 +174,38 @@ const Circle = styled.div`
 
 const VideoBackground = styled.video`
   position: fixed; /* Ensures the video stays fixed and covers the viewport */
-  top: 0;
-  left: 0;
-  width: 100%; /* Full viewport width */
-  height: 100%; /* Full viewport height */
+  width: 96%; /* Adjust width as needed */
+  height: 68%; /* Adjust height as needed */
+  top: 10%;
+  left: 2%;
   object-fit: cover; /* Ensures the video scales properly */
+  border-radius: 30rem;
   z-index: 0; /* Moves it behind other elements */
-  display: ${(props) => (props.show ? 'block' : 'none')};
+  clip-path: ${(props) =>
+    props.show ? 'circle(0% at 50% 50%)' : 'circle(0% at 50% 50%)'};
+  animation: ${(props) =>
+    props.show ? 'expand-circle 1s ease-out forwards, fade-in 1s ease-out forwards' : 'none'};
+  opacity: ${(props) => (props.show ? 1 : 0)};
+
+  @keyframes expand-circle {
+    from {
+      clip-path: circle(0% at 50% 50%);
+    }
+    to {
+      clip-path: circle(150% at 50% 50%);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
+
 
 const InteractionArea = styled.div`
     position: absolute;
@@ -178,7 +245,7 @@ const InteractionArea = styled.div`
     }
 
     &:hover {
-        cursor: url(src/cursor-play.png) 10 10, auto; }
+        cursor: none;}
     }
 `;
 
@@ -208,7 +275,6 @@ const Area = styled.div`
         transform: translateX(-50%);
         width: 40%; /* Adjust based on Region 4 */
         height: 25%; /* Adjust based on Region 4 */
-        cursor: url('source/cursor-social.png'), auto; /* Change cursor to image */
     }
 
     &.area6 {
@@ -217,7 +283,6 @@ const Area = styled.div`
         transform: translateY(-50%);
         width: 23%; /* Adjust based on Region 4 */
         height: 30%; /* Adjust based on Region 4 */
-        cursor: url('/source/cursor-social.png'), auto; /* Change cursor to image */
     }
 
     &.area7 {
@@ -230,34 +295,99 @@ const Area = styled.div`
     }
 
     &:hover {
-        cursor: url(src/cursor-question.png) 10 10, auto; }
+        cursor: none, auto; }
     }
 `;
 
 const Diagram = () => {
+    const [isInsideCircle, setIsInsideCircle] = useState(false);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [hoverSection, setHoverSection] = useState(null);
+    const [hoveringName, setHoveringName] = useState(false);
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+    const summaryRef = useState(null);
 
+    const areaContent = {
+      area1: {
+        default: 'Q1',
+        role: '',
+        question: '',
+      },
+      area2: {
+        default: 'Q2',
+        role: '',
+        question: '',
+      },
+      area3: {
+        default: 'Q3',
+        role: '',
+        question: '',
+      },
+      area4: {
+        default: 'Q4',
+        role: '',
+        question: '',
+      },
+      area5: {
+        default: '',
+        role: 'Critical Technologist',
+        question:
+          "who is excluded from the current AGI paradigm focusing on mimicking the 'average human'?",
+      },
+      area6: {
+        default: '',
+        role: 'HCI Researcher',
+        question: 'how can data be used ethically to empower marginalized communities?',
+      },
+      area7: {
+        default: '',
+        role: 'AI Engineer',
+        question: 'how can data be used ethically to empower marginalized communities?',
+      }
+    };
     const handleMouseMove = (event) => {
         setCursorPosition({ x: event.clientX, y: event.clientY });
+    };
+
+    const handleEnterCircle = () => {
+      setIsInsideCircle(true);
+    };
+  
+    const handleLeaveCircle = () => {
+      setIsInsideCircle(false);
     };
 
     const handleHover = (section) => {
         setHoverSection(section);
     };
 
+    const handleNameHover = () => {
+      setHoveringName(true);
+    };
+
+    const handleNameLeave = () => {
+      setHoveringName(false);
+    };
+
     const handleScrollToSummary = () => {
-      document.getElementById('summary-section').scrollIntoView({ behavior: 'smooth' });
+      if (summaryRef.current) {
+        summaryRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
     };
     
-
   return (
     <>
-    <DiagramContainer onMouseMove={handleMouseMove}>
+    <DiagramContainer 
+      onMouseMove={handleMouseMove}
+      style={{ cursor: isInsideCircle ? 'none' : 'default' }}
+    >
     <Header></Header>
         {!isMobile ? (
-            <VennDiagram>
+            <VennDiagram
+              onMouseEnter={handleEnterCircle}
+              onMouseLeave={handleLeaveCircle}
+            >
+                {isInsideCircle && <CustomCursor x={cursorPosition.x} y={cursorPosition.y} hoveredArea={hoverSection} isPopupHovered={false}/>}
                 <Circle className="circle1">
                 <div>
                     <TextH3>TOWARD</TextH3>
@@ -321,30 +451,36 @@ const Diagram = () => {
                     : hoverSection === 'area3'
                         ? 'src/circle3.mp4'
                     : hoverSection === 'area4'
-                        ? 'src/circle4.mp4'
+                        ? 'src/circle4.mov'
                         : ''
                 }
+                x={cursorPosition.x}
+                y={cursorPosition.y}
                 autoPlay
                 loop
                 muted
                 show={!!hoverSection}
-            />
-            <PopupImage
-                src="src/cursor-social.png"
-                visible={hoverSection === 'area5' || hoverSection === 'area6' || hoverSection === 'area7'}
-                x={cursorPosition.x}
-                y={cursorPosition.y}
             />
             </VennDiagram>
         ) : (
             <VideoBackground src="src/default.mp4" autoPlay loop muted show />
         )}
         <DashedLine/>
-        <NameContainer onClick={handleScrollToSummary}>
-          Saetbyeol LeeYouk
-        </NameContainer>
+        <Description>
+          <RoleNot>{hoverSection ? areaContent[hoverSection].default : 'Saetbyeol Leeyouk'}</RoleNot>{' '}
+          <Question>
+            {hoverSection
+              ? areaContent[hoverSection].question
+              : ' '}<br></br>
+          </Question>
+          <HighlightedText onClick={handleScrollToSummary}>
+          LEARN MORE <FaArrowDown />
+        </HighlightedText>
+      </Description>
     </DiagramContainer>
-    <Summary />
+      <div id="summary-section" ref={summaryRef}>
+      <Summary />
+    </div>
     </>
   );
 };

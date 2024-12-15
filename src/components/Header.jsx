@@ -1,69 +1,90 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const StyledHeader = styled.header`
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 100; /* Ensures it stays on top of other content */
-    background-color: transparency; /* Matches the page background */
-    padding: 2rem 1rem;
+  position: ${(props) => (props.variant === 'white' ? 'block' : 'sticky')};
+  width: 80%; /* Full width of the header */
+  z-index: 100; /* Keeps it above other elements */
+  padding: 2rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  background-color: ${(props) =>
+    props.variant === 'white' ? 'transparent' : props.isScrolled ? 'rgba(248, 249, 250, 0.3)' : 'transparent'};
+  color: ${(props) => (props.variant === 'white' ? '#ece8e8' : props.isScrolled ? '#ece8e8' : 'white')};
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.2rem;
+
+  a {
+    text-decoration: none;
+    color: ${(props) => (
+      props.variant === 'white' ? '#2b2a2a' : props.isScrolled ? '#ece8e8' : 'white')};
+    flex: 1;
+    text-align: center;
     margin: 0 auto;
-    
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
-    font-size: 1.2rem;
+    opacity: 0.6; /* Default opacity */
+    font-style: normal; /* Default style */
+    font-weight: normal; /* Default weight */
+    transition: all 0.3s ease;
 
-    a {
-        text-decoration: none;
-        color: white;
-        flex: 1;
-        text-align: center;
-        margin: 0 auto;
-        opacity: 0.3; /* Default opacity */
-        font-style: normal; /* Default style */
-        font-weight: normal; /* Default weight */
-        transition: all 0.3s ease; /* Smooth transitions for hover and active states */
-
-        &:hover {
-            opacity: 1;
-            font-style: italic;
-        }
-        &.active {
-            font-style: italic;
-            opacity: 1; /* Active page link has full opacity */
-        }
+    &:hover {
+      opacity: 1;
+      flex: 1;
+      text-decoration: underline 1px dashed;
     }
+
+    &.active {
+      opacity: 1; /* Full opacity for active link */
+    }
+  }
 `;
 
-const Header = () => {
-    const location = useLocation(); // Get the current route
-  
-    return (
-      <StyledHeader>
-        <a
-          href="#saetbyeol"
-          className={location.pathname === '/saetbyeol' ? 'active' : ''}
-        >
-          SAETBYEOL
-        </a>
-        <a
-          href="#projects"
-          className={location.pathname === '/projects' ? 'active' : ''}
-        >
-          PROJECTS
-        </a>
-        <a
-          href="#about"
-          className={location.pathname === '/about' ? 'active' : ''}
-        >
-          ABOUT
-        </a>
-      </StyledHeader>
-    );
-  };
-  
-  export default Header;
+const Header = ({ variant }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/saetbyeol') {
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        const threshold = 100; // Adjust threshold for when the header changes style
+        setIsScrolled(scrollPosition > threshold);
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    } else {
+      setIsScrolled(false);
+    }
+  }, [location.pathname]);
+
+  return (
+    <StyledHeader isScrolled={isScrolled} variant={variant}>
+      <Link
+        to="/saetbyeol"
+        className={location.pathname === '/saetbyeol' ? 'active' : ''}
+      >
+        SAETBYEOL
+      </Link>
+      <Link
+        to="/projects"
+        className={location.pathname === '/projects' ? 'active' : ''}
+      >
+        PROJECTS
+      </Link>
+      <Link
+        to="/about"
+        className={location.pathname === '/about' ? 'active' : ''}
+      >
+        ABOUT
+      </Link>
+    </StyledHeader>
+  );
+};
+
+export default Header;
