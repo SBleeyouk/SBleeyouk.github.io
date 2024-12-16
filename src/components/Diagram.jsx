@@ -309,22 +309,22 @@ const Diagram = () => {
 
     const areaContent = {
       area1: {
-        default: 'Q1',
+        default: 'How can AI amplify and reshape the collective memory of civic society?',
         role: '',
         question: '',
       },
       area2: {
-        default: 'Q2',
+        default: 'How can we empower activists to dismantle deepfake sexual crime networks while easing their emotional burden?',
         role: '',
         question: '',
       },
       area3: {
-        default: 'Q3',
+        default: 'Why all fairytale girls want party, while all fairytale boys fight with dragons?',
         role: '',
         question: '',
       },
       area4: {
-        default: 'Q4',
+        default: 'How can we support individuals with autism disorder for training emotional communication?',
         role: '',
         question: '',
       },
@@ -332,17 +332,17 @@ const Diagram = () => {
         default: '',
         role: 'Critical Technologist',
         question:
-          "who is excluded from the current AGI paradigm focusing on mimicking the 'average human'?",
+          "How can we empower objectified others to exist authentically and speak on their terms?",
       },
       area6: {
         default: '',
         role: 'HCI Researcher',
-        question: 'how can data be used ethically to empower marginalized communities?',
+        question: 'How can we design interactions that empower marginalized groups through technology?',
       },
       area7: {
         default: '',
         role: 'AI Engineer',
-        question: 'how can data be used ethically to empower marginalized communities?',
+        question: "How does AI's bias toward the 'average' exclude diverse identities?",
       }
     };
     const handleMouseMove = (event) => {

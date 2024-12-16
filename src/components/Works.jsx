@@ -70,7 +70,7 @@ const FilterButton = styled.button`
   font-family: 'Cygnito Mono', monospace;
   font-weight: 600;
   line-height: 0.5rem;
-  color: ${(props) => (props.active ? '#ff6035' : 'rgba(255, 96, 53, 0.7)')};
+  color: ${(props) => (props.active ? '#ff6035' : 'rgba(255, 96, 53, 0.3)')};
   text-decoration: ${(props) => (props.active ? 'underline' : 'normal')};
   outline: transparent;
   background: none;
@@ -92,7 +92,7 @@ const FilterButton = styled.button`
     font-family: 'PP Neue Montreal', sans-serif;
     font-size: 0.7rem; /* Smaller font size for count */
     font-weight: 400;
-    color: rgba(255, 96, 53, 0.7); /* Muted color for count */
+    color: rgba(255, 96, 53, 0.3); /* Muted color for count */
     position: absolute;
     margin-left: 0.2rem;
   }

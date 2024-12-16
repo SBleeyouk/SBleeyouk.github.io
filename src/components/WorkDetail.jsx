@@ -114,7 +114,7 @@ const Tag = styled.div`
 
 const PDFLink = styled.a`
   font-family: 'Cygnito Mono', monospace;
-  width: 5rem;
+  width: 8rem;
   text-align: center;
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -181,7 +181,7 @@ const BasicDescrip = styled.li`
 `;
 
 const DetailSection = styled.div`
-  width: 100%;
+  width: 80%;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -306,7 +306,7 @@ const ProjectDetail = () => {
             ))}
             {project.pdfLink && (
               <PDFLink href={project.pdfLink} target="_blank" rel="noopener noreferrer">
-                View PDF
+                View Details
               </PDFLink>
             )}
           </TagItem>
@@ -315,60 +315,109 @@ const ProjectDetail = () => {
           <Thumbnail src={project.thumbnail} alt={project.title} />
         </ThumbnailWrapper>
         <ProjectInfo>
-            <PrjIntroInfo>
+        {project.roles && project.roles.length > 0 && (
+          <PrjIntroInfo>
             <BasicTitle>MY ROLE</BasicTitle>
-                <BasicDescripList>
-                    {project.roles && project.roles.map((role, index) => (
-                    <BasicDescrip key={index}>{role}</BasicDescrip>
-                    ))}
-                </BasicDescripList>
-            </PrjIntroInfo>
-            <PrjIntroInfo>
-                <BasicTitle>CREDITS</BasicTitle>
-                <BasicDescripList>
-                    {project.credits && project.credits.map((credit, index) => (
-                    <BasicDescrip key={index}>{credit}</BasicDescrip>
-                    ))}
-                </BasicDescripList>
-            </PrjIntroInfo>
-            <PrjIntroInfo>
-                <BasicTitle>AWARDS</BasicTitle>
-                <BasicDescripList>
-                    {project.awards && project.awards.map((award, index) => (
-                    <BasicDescrip key={index}>{award}</BasicDescrip>
-                    ))}
-                </BasicDescripList>
-            </PrjIntroInfo>
-            <PrjIntroInfo>
-                <BasicTitle>FUNDED</BasicTitle>
-                <BasicDescripList>
-                    {project.funded && project.funded.map((fund, index) => (
-                    <BasicDescrip key={index}>{fund}</BasicDescrip>
-                    ))}
-                </BasicDescripList>
-            </PrjIntroInfo>
-        </ProjectInfo>
+            <BasicDescripList>
+              {project.roles.map((role, index) => (
+                <BasicDescrip key={index}>{role}</BasicDescrip>
+              ))}
+            </BasicDescripList>
+          </PrjIntroInfo>
+        )}
+
+        {project.credits && project.credits.length > 0 && (
+          <PrjIntroInfo>
+            <BasicTitle>CREDITS</BasicTitle>
+            <BasicDescripList>
+              {project.credits.map((credit, index) => (
+                <BasicDescrip key={index}>{credit}</BasicDescrip>
+              ))}
+            </BasicDescripList>
+          </PrjIntroInfo>
+        )}
+
+        {project.awards && project.awards.length > 0 && (
+          <PrjIntroInfo>
+            <BasicTitle>AWARDS</BasicTitle>
+            <BasicDescripList>
+              {project.awards.map((award, index) => (
+                <BasicDescrip key={index}>{award}</BasicDescrip>
+              ))}
+            </BasicDescripList>
+          </PrjIntroInfo>
+        )}
+
+        {project.funded && project.funded.length > 0 && (
+          <PrjIntroInfo>
+            <BasicTitle>FUNDED</BasicTitle>
+            <BasicDescripList>
+              {project.funded.map((fund, index) => (
+                <BasicDescrip key={index}>{fund}</BasicDescrip>
+              ))}
+            </BasicDescripList>
+          </PrjIntroInfo>
+        )}
+      </ProjectInfo>
+
         <DetailSection>
             {project.motivation}
-            {project.motivationSrc.map((src, index) => (
+            {project.motivationSrc.map((src, index) => {
+              console.log('SRC VALUE:', src); // Debugging line to see the exact value of 'src'
+              
+              return (
                 <DetailItem key={index}>
-                {src.endsWith('.mp4') ? (
-                    <video src={src} controls />
-                ) : (
-                    <img src={src} alt={`Detail ${index + 1}`} />
-                )}
+                  {/* Check for YouTube Links */}
+                  {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com')? (
+                    <iframe
+                      width="100%"
+                      height="600"
+                      src={src} // Convert to embed if needed
+                      title={`YouTube Video ${index + 1}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ) : src.endsWith('.mp4') ? (
+                    // Render local video files
+                    <video src={src} controls width="100%" />
+                  ) : (
+                    // Render image files for all other cases
+                    <img src={src} alt={`Detail ${index + 1}`} width="100%" />
+                  )}
                 </DetailItem>
-            ))}
+              );
+            })}
             {project.approach}
-            {project.approachSrc.map((src, index) => (
+            {project.approachSrc.map((src, index) => {
+              console.log('SRC VALUE:', src); // Debugging line to see the exact value of 'src'
+              
+              return (
                 <DetailItem key={index}>
-                {src.endsWith('.mp4') ? (
-                    <video src={src} controls />
-                ) : (
-                    <img src={src} alt={`Detail ${index + 1}`} />
-                )}
+                  {/* Check for YouTube Links */}
+                  {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com')? (
+                    <iframe
+                      width="100%"
+                      height="600"
+                      src={src} // Convert to embed if needed
+                      title={`YouTube Video ${index + 1}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ) : src.endsWith('.mp4') ? (
+                    // Render local video files
+                    <video src={src} controls width="100%" />
+                  ) : (
+                    // Render image files for all other cases
+                    <img src={src} alt={`Detail ${index + 1}`} width="100%" />
+                  )}
                 </DetailItem>
-            ))}
+              );
+            })}
+
+
+
         </DetailSection>
       </PrjScreen>
       <NextPrjScreen

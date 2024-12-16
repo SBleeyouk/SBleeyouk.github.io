@@ -65,7 +65,7 @@ const ProjectDescrip = styled.p`
 `
 
 const PDFLink = styled.a`
-  width: 4rem;
+  width: 5rem;
   text-align: center;
   display: inline-block;
   margin-top: 0.5rem;
@@ -114,7 +114,7 @@ const PrjInfo = ({ thumbnail, title, description, year, pdfLink, onClick }) => {
             <span className="year">/ {year}</span>
           </ProjectDetails>
           <ProjectDescrip>{description}</ProjectDescrip>
-          {pdfLink && <PDFLink href={pdfLink} target="_blank">View PDF</PDFLink>}
+          {pdfLink && <PDFLink href={pdfLink} target="_blank">View Details</PDFLink>}
         </ProjectCard>
       </>
     );

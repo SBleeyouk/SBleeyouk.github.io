@@ -53,6 +53,17 @@ const Intro = styled.p`
   margin-bottom: 1rem; /* Add consistent spacing */
   width: 100%;
   text-align: left;
+
+  span{
+    color: #ff6035;
+    font-wieght: 700;
+    font-style: italic;
+  }
+  a{
+    font-style: italic;
+    text-decoration: underline #ff6035 1px solid;
+    color: #2b2a2a;
+  }
 `;
 
 const Title = styled.h2`
@@ -82,6 +93,7 @@ const ApproachItem = styled.div`
   padding: 1.2rem;
   border-top: 1px solid #ff6035;
   width: 100%; /* Take full width of the container */
+  height: 300px;
   box-sizing: border-box; /* Include padding in width */
   text-align: left;
   gap: 1rem;
@@ -228,37 +240,37 @@ const Summary = () => {
     const [approaches] = useState([
         {
         id: 1,
-        title: 'Interaction at Scale',
-        description: 'Children with Autism Spectrum Disorder (ASD) often struggle with expressing emotions, leading to communication and socialization challenges, which can result in anxiety and depression. Although existing emotion training systems focus on recognizing others’ emotions, there is a lack of emphasis on helping children express and communicate their own feelings.',
-        gif: 'src/approach01.gif',
+        title: 'Speculate Utopia',
+        description: "What does the ultimate 'good' future look like? By starting with imagination, I identify gaps between current realities, imaginable futures, and ideal futures. This approach bridges practical needs with holistic thinking, considering the project's context and techniques to address its challenges.",
+        gif: 'src/approach01.png',
         staticImage: 'src/approach01.png',
         questions: [
-            { id: '1'},
+            { id: '3'},
             { id: '2' },
         ],
         },
         {
-        id: 2,
-        title: 'Design Approach',
-        description: 'Description',
-        gif: '/path/to/animated2.gif',
-        staticImage: '/path/to/static2.png',
-        questions: [
-            { text: 'Question Here', popupImage: '/path/to/question3-popup.png' },
-            { text: 'Question Here', popupImage: '/path/to/question4-popup.png' },
-        ],
-        },
-        {
-        id: 3,
-        title: 'Design Approach',
-        description: 'Description',
-        gif: '/path/to/animated3.gif',
-        staticImage: '/path/to/static3.png',
-        questions: [
-            { text: 'Question Here', popupImage: '/path/to/question5-popup.png' },
-            { text: 'Question Here', popupImage: '/path/to/question6-popup.png' },
-        ],
-        },  
+          id: 2,
+          title: 'Research Through Marginalized Perspectives',
+          description: 'I tackle complex technological challenges by centering marginalized voices. These individuals, excluded from mainstream narratives, hold creative and alternative visions for the future. My approach focuses on translating their imaginations, solutions, and methodologies into scalable, impactful systems.',
+          gif: 'src/approach02.png',
+          staticImage: 'src/approach02.png',
+          questions: [
+              { id: '3'},
+              { id: '4' },
+          ],
+          },
+          {
+            id: 3,
+            title: 'Build Scalable Systems and Measure Impact',
+            description: 'In the rapidly changing landscape of technology, I uncover and deconstruct the hidden math and algorithms driving it. Building on this understanding, I pose critical questions, develop alternative systems, and evaluate their potential as viable alternatives to existing technologies.',
+            gif: 'src/approach03.png',
+            staticImage: 'src/approach03.png',
+            questions: [
+                { id: '5'},
+                { id: '6' },
+            ],
+            },
     ]);
   
 
@@ -270,7 +282,8 @@ const Summary = () => {
         <BigTitle>Question + Create technology as a force for justice</BigTitle>
         <IntroBox>
             <Intro>
-            Saetbyeol LeeYouk is HCI researcher, AI engineer, and UX designer who explore and mitigate the risks of emerging technology. Focusing on design, develop, and deploying scalable system for specific marginalized groups from technology - disabilities, victims of deepfake crime, underrepresented identities - she aim to design inclusive and safe AI society for everyone. She is currently an undergraduate research intern at KIXLAB(KAIST Interaction Lab).
+            Saetbyeol Leeyouk is a <span>Critical Technologist</span> dedicated to addressing the risks of emerging technologies. Drawing on critical theory and feminist epistemology, she designs, develops, and deploys scalable systems that support marginalized groups, including individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities. Her work focuses on fostering inclusive, technology-augmented self-identities that embrace and empower diverse identities.
+            <br></br><br></br>She is currently an undergraduate research intern at <a href='https://www.kixlab.org' target="_blank" rel="noopener noreferrer">KIXLAB (KAIST Interaction Lab)</a>, <br></br>pursuing a BAS in <a href='https://creative.sogang.ac.kr' target="_blank" rel="noopener noreferrer">Art & Technology</a> and a BS in Artificial Intelligence at Sogang University.
             </Intro>
         </IntroBox>
     </IntroSection>

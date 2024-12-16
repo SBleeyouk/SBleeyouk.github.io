@@ -115,7 +115,7 @@ const URL = styled.a`
 
 const CVFrame = styled.iframe`
   width: 80%;
-  height: 800px;
+  height: 1000px;
   margin-top: 1rem;
   border: #ff6035 1px solid ;
 `;
@@ -247,28 +247,40 @@ function Projects() {
   const [hoveredApproachId, setHoveredApproachId] = useState(null);
   const [isPopupHovered, setIsPopupHovered] = useState(false);
   const [approaches] = useState([
-    {
-    id: 1,
-    title: 'Interaction at Scale',
-    description: 'Description goes here',
-    gif: 'src/approach01.gif',
-    staticImage: 'src/approach01.png',
-    },
-    {
-    id: 2,
-    title: 'Design Approach',
-    description: 'Description',
-    gif: '/path/to/animated2.gif',
-    staticImage: '/path/to/static2.png',
-    },
-    {
-    id: 3,
-    title: 'Design Approach',
-    description: 'Description',
-    gif: '/path/to/animated3.gif',
-    staticImage: '/path/to/static3.png',
-    },  
-]);
+            {
+            id: 1,
+            title: 'Speculate Utopia',
+            description: "What does the ultimate 'good' future look like? By starting with imagination, I identify gaps between current realities, imaginable futures, and ideal futures. This approach bridges practical needs with holistic thinking, considering the project's context and techniques to address its challenges.",
+            gif: 'src/approach01.png',
+            staticImage: 'src/approach01.png',
+            questions: [
+                { id: '3'},
+                { id: '2' },
+            ],
+            },
+            {
+              id: 2,
+              title: 'Research Through Marginalized Perspectives',
+              description: 'I tackle complex technological challenges by centering marginalized voices. These individuals, excluded from mainstream narratives, hold creative and alternative visions for the future. My approach focuses on translating their imaginations, solutions, and methodologies into scalable, impactful systems.',
+              gif: 'src/approach02.png',
+              staticImage: 'src/approach02.png',
+              questions: [
+                  { id: '3'},
+                  { id: '4' },
+              ],
+              },
+              {
+                id: 3,
+                title: 'Build Scalable Systems and Measure Impact',
+                description: 'In the rapidly changing landscape of technology, I uncover and deconstruct the hidden math and algorithms driving it. Building on this understanding, I pose critical questions, develop alternative systems, and evaluate their potential as viable alternatives to existing technologies.',
+                gif: 'src/approach03.png',
+                staticImage: 'src/approach03.png',
+                questions: [
+                    { id: '5'},
+                    { id: '6' },
+                ],
+                },
+        ]);
   return (
     <>
     <motion.div
@@ -284,7 +296,8 @@ function Projects() {
               <Profile src="src/profile-2.jpg" alt="Profile Image" />
               <IntroBox>
                 <Intro>
-                  <span>Saetbyeol Leeyouk</span> is HCI researcher, AI engineer, and UX designer who explore and mitigate the risks of emerging technology. Focusing on design, develop, and deploying scalable system for specific marginalized groups from technology - disabilities, victims of deepfake crime, underrepresented identities - she aim to design inclusive and safe AI society for everyone. She is currently an undergraduate research intern at <a href='https://www.kixlab.org' target="_blank" rel="noopener noreferrer">KIXLAB(KAIST Interaction Lab)</a>.
+                <span>Saetbyeol Leeyouk</span> is a Critical Technologist dedicated to addressing the risks of emerging technologies. Drawing on critical theory and feminist epistemology, she designs, develops, and deploys scalable systems that support marginalized groups, including individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities. Her work focuses on fostering inclusive, technology-augmented self-identities that embrace and empower diverse identities.
+                <br></br><br></br>She is currently an undergraduate research intern at <a href='https://www.kixlab.org' target="_blank" rel="noopener noreferrer">KIXLAB (KAIST Interaction Lab)</a>, <br></br>pursuing a BAS in <a href='https://creative.sogang.ac.kr' target="_blank" rel="noopener noreferrer">Art & Technology</a> and a BS in Artificial Intelligence at Sogang University.
                 </Intro>
                 <URLbox>
                   <URL href='mailto:sbleeyouk@sogang.ac.kr' target="_blank" rel="noopener noreferrer"><MdEmail /></URL>
@@ -346,7 +359,7 @@ function Projects() {
           src="https://drive.google.com/file/d/1mwWmZUPnC143_vt-6B6l4Za7M1qq5Nuv/preview" allow="autoplay">
         </CVFrame>
       <Footer>
-        <FooterText>© Saetbyeol LeeYouk developed with React</FooterText>
+        <FooterText>© Saetbyeol LeeYouk created with React</FooterText>
       </Footer>
     </AboutContainer>
     </motion.div>
