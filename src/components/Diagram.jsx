@@ -473,6 +473,7 @@ const Diagram = () => {
               ? areaContent[hoverSection].question
               : ' '}<br></br>
           </Question>
+          <br></br>
           <HighlightedText onClick={handleScrollToSummary}>
           LEARN MORE <FaArrowDown />
         </HighlightedText>

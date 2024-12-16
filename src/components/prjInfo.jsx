@@ -49,6 +49,10 @@ const ProjectDetails = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
     margin:0;
+
+    &:hover{
+    color: #ff6035;
+    }
   }
     .year {
         font-size: 0.85rem;

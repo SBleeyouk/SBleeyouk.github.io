@@ -70,7 +70,7 @@ const FilterButton = styled.button`
   font-family: 'Cygnito Mono', monospace;
   font-weight: 600;
   line-height: 0.5rem;
-  color: ${(props) => (props.active ? '#ff6035' : 'rgba(255, 96, 53, 0.3)')};
+  color: ${(props) => (props.active ? '#ff6035' : 'rgba(255, 96, 53, 0.5)')};
   text-decoration: ${(props) => (props.active ? 'underline' : 'normal')};
   outline: transparent;
   background: none;
@@ -90,9 +90,9 @@ const FilterButton = styled.button`
   }
   .project-count {
     font-family: 'PP Neue Montreal', sans-serif;
-    font-size: 0.7rem; /* Smaller font size for count */
+    font-size: 0.8rem; /* Smaller font size for count */
     font-weight: 400;
-    color: rgba(255, 96, 53, 0.3); /* Muted color for count */
+    color: rgba(255, 96, 53, 0.5); /* Muted color for count */
     position: absolute;
     margin-left: 0.2rem;
   }
@@ -176,7 +176,7 @@ const Projects = () => {
     <ProjectScreen>
       <Filters>
         <FilterGroup>
-          {['ALL', 'AI', 'Social Justice', 'Education', 'Interface', 'Media Art', 'Research'].map((context) => {
+          {['ALL', 'AI', 'Social Justice', 'Education', 'Interface', 'Media Art', 'Research', 'Individual'].map((context) => {
           const projectCount =
             context === 'ALL'
               ? projects.length
@@ -223,7 +223,7 @@ const Projects = () => {
       </ProjectGrid>
     </ProjectScreen>
     <Footer>
-        <FooterText>© Saetbyeol LeeYouk developed with React</FooterText>
+        <FooterText>© Saetbyeol LeeYouk created with React</FooterText>
       </Footer>
     </ProjectContainer>
     </motion.div>
