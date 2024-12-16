@@ -93,7 +93,6 @@ const ApproachItem = styled.div`
   padding: 1.2rem;
   border-top: 1px solid #ff6035;
   width: 100%; /* Take full width of the container */
-  height: 300px;
   box-sizing: border-box; /* Include padding in width */
   text-align: left;
   gap: 1rem;
@@ -241,34 +240,33 @@ const Summary = () => {
         {
         id: 1,
         title: 'Speculate Utopia',
-        description: "What does the ultimate 'good' future look like? By starting with imagination, I identify gaps between current realities, imaginable futures, and ideal futures. This approach bridges practical needs with holistic thinking, considering the project's context and techniques to address its challenges.",
+        description: "What does the ultimate 'good' future look like? By starting with imagination, I identify gaps between current realities, imaginable futures, and ideal futures to bridge between practical challenges and holistic approach.",
         gif: 'src/approach01.png',
-        staticImage: 'src/approach01.png',
+        staticImage: 'src/approach01-bf.png',
         questions: [
-            { id: '3'},
-            { id: '2' },
+            { id: '2'},
+            { id: '6' },
         ],
         },
         {
           id: 2,
           title: 'Research Through Marginalized Perspectives',
-          description: 'I tackle complex technological challenges by centering marginalized voices. These individuals, excluded from mainstream narratives, hold creative and alternative visions for the future. My approach focuses on translating their imaginations, solutions, and methodologies into scalable, impactful systems.',
+          description: 'Individuals, excluded from mainstream narratives, hold creative and alternative visions for the future. My approach focuses on translating their imaginations, solutions, and methodologies into scalable, impactful systems.',
           gif: 'src/approach02.png',
-          staticImage: 'src/approach02.png',
+          staticImage: 'src/approach02-bf.png',
           questions: [
-              { id: '3'},
-              { id: '4' },
+              { id: '4'},
+              { id: '3' },
           ],
           },
           {
             id: 3,
             title: 'Build Scalable Systems and Measure Impact',
-            description: 'In the rapidly changing landscape of technology, I uncover and deconstruct the hidden math and algorithms driving it. Building on this understanding, I pose critical questions, develop alternative systems, and evaluate their potential as viable alternatives to existing technologies.',
+            description: 'Uncover and deconstruct the hidden math and algorithms driving rapid changing technology. Building on this understanding, I pose critical questions, develop alternative systems, and evaluate their potential.',
             gif: 'src/approach03.png',
-            staticImage: 'src/approach03.png',
+            staticImage: 'src/approach03-bf.png',
             questions: [
-                { id: '5'},
-                { id: '6' },
+                { id: '1'},
             ],
             },
     ]);

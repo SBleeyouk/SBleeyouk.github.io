@@ -309,22 +309,22 @@ const Diagram = () => {
 
     const areaContent = {
       area1: {
-        default: 'How can AI amplify and reshape the collective memory of civic society?',
+        default: 'AI and Civic Memory, <Testimony Continues>',
         role: '',
         question: '',
       },
       area2: {
-        default: 'How can we empower activists to dismantle deepfake sexual crime networks while easing their emotional burden?',
+        default: 'XR as Reflection of Hidden Reality, <The dOXr>',
         role: '',
         question: '',
       },
       area3: {
-        default: 'Why all fairytale girls want party, while all fairytale boys fight with dragons?',
+        default: 'Debiased AI Fairytale Author, <Franklin>',
         role: '',
         question: '',
       },
       area4: {
-        default: 'How can we support individuals with autism disorder for training emotional communication?',
+        default: 'Emotion Training System for ASD, <Rainbow>',
         role: '',
         question: '',
       },
@@ -447,11 +447,11 @@ const Diagram = () => {
                     hoverSection === 'area1'
                         ? 'https://storage.googleapis.com/saetbyeol-images/circle1.mp4'
                     : hoverSection === 'area2'
-                        ? 'src/circle2.mp4'
+                        ? 'https://storage.googleapis.com/saetbyeol-images/circle2.mp4'
                     : hoverSection === 'area3'
-                        ? 'src/circle3.mp4'
+                        ? 'https://storage.googleapis.com/saetbyeol-images/circle3.mp4'
                     : hoverSection === 'area4'
-                        ? 'src/circle4.mov'
+                        ? 'https://storage.googleapis.com/saetbyeol-images/circle4.mp4'
                         : ''
                 }
                 x={cursorPosition.x}
@@ -473,6 +473,7 @@ const Diagram = () => {
               ? areaContent[hoverSection].question
               : ' '}<br></br>
           </Question>
+          <br></br>
           <HighlightedText onClick={handleScrollToSummary}>
           LEARN MORE <FaArrowDown />
         </HighlightedText>
