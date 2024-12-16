@@ -15,7 +15,7 @@ const DiagramContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #ff6035;
+  background-image: url('./src/background.png');
   background-size: cover;
   position: relative;
 
@@ -473,7 +473,6 @@ const Diagram = () => {
               ? areaContent[hoverSection].question
               : ' '}<br></br>
           </Question>
-          <br></br>
           <HighlightedText onClick={handleScrollToSummary}>
           LEARN MORE <FaArrowDown />
         </HighlightedText>

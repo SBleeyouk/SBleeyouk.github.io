@@ -85,6 +85,7 @@ const ApproachList = styled.div`
   text-align: center;
   width: 90%; /* Centered width */
   gap: 2rem; /* Space between items */
+  margin-bottom: 4rem;
 `;
 
 const ApproachItem = styled.div`
@@ -179,10 +180,10 @@ const QuestionItem = styled.li`
     z-index: 100;
     transform: translateY(20%);
     width: 80%;
-    height: 10rem;
+    height: 12rem;
     background-image: url(${(props) => props.popupImage});
     background-size: cover;
-    border-radius: 120px;
+    border-radius: 8px;
     border: #ff6035 1px solid;
     background-position: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -245,7 +246,7 @@ const Summary = () => {
         staticImage: 'src/approach01-bf.png',
         questions: [
             { id: '2'},
-            { id: '6' },
+            { id: '5' },
         ],
         },
         {
@@ -255,8 +256,8 @@ const Summary = () => {
           gif: 'src/approach02.png',
           staticImage: 'src/approach02-bf.png',
           questions: [
-              { id: '4'},
-              { id: '3' },
+              { id: '3'},
+              { id: '4' },
           ],
           },
           {
@@ -343,10 +344,10 @@ const Summary = () => {
         ))}
       </ApproachList>
       <HighlightedTextTwo onClick = {() => navigate(`/projects`)}>
-        VIEW 24 MORE PROJECTS <FiArrowUpRight />
+        VIEW MORE PROJECTS <FiArrowUpRight />
         </HighlightedTextTwo>
       <Footer>
-        <FooterText>© Saetbyeol LeeYouk developed with React</FooterText>
+        <FooterText>© Saetbyeol LeeYouk created with React</FooterText>
       </Footer>
     </SummaryContainer>
     </>

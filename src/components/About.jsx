@@ -144,6 +144,7 @@ const ApproachList = styled.div`
 const ApproachItem = styled.div`
   display: flex;
   flex-direction: column;
+  height: 32rem;
   align-items: flex-start; /* Align content at the top */
   padding: 1rem;
   border-left: 1px solid #ff6035;

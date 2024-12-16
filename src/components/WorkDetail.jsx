@@ -193,8 +193,9 @@ const DetailSection = styled.div`
 `;
 
 const DetailItem = styled.div`
+  display: inline-block;
   width: 100%;
-  text-align: center;
+  text-align: justify;
 
   img,
   video {
