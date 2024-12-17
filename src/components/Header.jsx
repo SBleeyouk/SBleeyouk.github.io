@@ -39,6 +39,9 @@ const StyledHeader = styled.header`
       opacity: 1; /* Full opacity for active link */
     }
   }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const Header = ({ variant }) => {

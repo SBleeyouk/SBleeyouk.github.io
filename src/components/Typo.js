@@ -6,6 +6,9 @@ export const Title = styled.h1`
   font-style: normal;
   font-size: ${(props) => props.size || '1.5rem'};
   color: ${(props) => props.color || '#ece8e8'};
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const TextH3 = styled.h3`
@@ -33,6 +36,7 @@ export const HighlightedText = styled.span`
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.7;
   cursor: pointer;
+  margin-top: 1.5rem;
 
   &:hover {
     transform: scale(1.1);
@@ -42,6 +46,9 @@ export const HighlightedText = styled.span`
 
   svg {
     margin-left: 0.5rem; /* Add spacing between text and icon */
+  }
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -71,5 +78,8 @@ export const HighlightedTextTwo= styled.span`
 
   svg {
     margin-left: 0.5rem; /* Add spacing between text and icon */
+  }
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
   }
 `;

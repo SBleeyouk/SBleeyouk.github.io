@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Header from './Header';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-
 import { motion } from 'framer-motion';
 
 const pageVariants = {
@@ -58,6 +57,11 @@ const AboutInfoProfile = styled.div`
   display: flex;
   flex-direction: row;
   margin: 4rem 0rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0rem;
+  }
 `
 
 const Profile = styled.img`
@@ -65,6 +69,9 @@ const Profile = styled.img`
   height: auto;
   border-radius: 8px; /* Makes the image corners rounded */
   object-fit: cover; /* Ensures the image maintains aspect ratio */
+  @media (max-width: 768px) {
+    width: 70%;
+  }
 `;
 
 const IntroBox = styled.div`
@@ -74,6 +81,10 @@ const IntroBox = styled.div`
     align-items: flex-start;
     justify-content: center;
     padding-left: 4rem;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 0;
+  }
 `;
 
 const Intro = styled.p`
@@ -89,6 +100,9 @@ const Intro = styled.p`
   a{
     text-decoration: underline #2b2a2a 1px solid;
     color: #2b2a2a;
+  }
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
@@ -111,11 +125,14 @@ const URL = styled.a`
       opacity: 1; /* Smooth fade-in effect */
   }
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `
 
 const CVFrame = styled.iframe`
   width: 80%;
-  height: 1000px;
+  height: 800px;
   margin-top: 1rem;
   border: #ff6035 1px solid ;
 `;
@@ -129,6 +146,9 @@ const Title = styled.h2`
   margin-bottom: 2rem; /* Add consistent spacing */
   width: 100%;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const ApproachList = styled.div`
@@ -139,12 +159,15 @@ const ApproachList = styled.div`
   text-align: center;
   width: 100%; /* Centered width */
   gap: 2rem; /* Space between items */
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ApproachItem = styled.div`
   display: flex;
   flex-direction: column;
-  height: 32rem;
+  height: auto;
   align-items: flex-start; /* Align content at the top */
   padding: 1rem;
   border-left: 1px solid #ff6035;
@@ -206,6 +229,9 @@ const ApproachTitle = styled.h3`
 const ApproachDescription = styled.p`
   font-size: 1.2rem;
   color: #757474;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const CollaboItem = styled.div`
@@ -225,6 +251,9 @@ const CollaboTitle = styled.div`
   font-weight: 400;
   padding: 0.4rem 1rem;
   color: #2b2a2a;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `
 
 export const Footer = styled.div`
@@ -360,7 +389,7 @@ function Projects() {
           src="https://drive.google.com/file/d/1mwWmZUPnC143_vt-6B6l4Za7M1qq5Nuv/preview" allow="autoplay">
         </CVFrame>
       <Footer>
-        <FooterText>© Saetbyeol LeeYouk created with React</FooterText>
+        <FooterText></FooterText>
       </Footer>
     </AboutContainer>
     </motion.div>

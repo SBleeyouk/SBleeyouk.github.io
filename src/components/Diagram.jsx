@@ -36,7 +36,7 @@ const VennDiagram = styled.div`
   aspect-ratio: 1;
   margin: auto;
   @media (max-width: 768px) {
-    display: none; /* Hide on mobile */
+    height: 50%;
   }
 `;
 
@@ -96,7 +96,6 @@ const DashedLine = styled.div`
   width: 1px;
   height: 32%; /* Adjust height as needed */
   background: repeating-linear-gradient(
-    to bottom,
     #ece8e8 0%,
     #ece8e8 50%,
     transparent 50%,
@@ -154,6 +153,10 @@ const Circle = styled.div`
       left: 35%; /* Moves text 30% to the left within the circle */
       text-align: center;
       width: 60%;
+      @media (max-width: 768px) {
+        top: 35%;
+        left: 32%;
+      }
     }
   }
 
@@ -168,6 +171,10 @@ const Circle = styled.div`
       top: 40%;
       right: 45%; /* Moves text 30% to the right within the circle */
       text-align: center;
+      @media (max-width: 768px) {
+        top: 35%;  
+        right: 38%;
+      }
     }
   }
 `;
@@ -249,17 +256,6 @@ const InteractionArea = styled.div`
     }
 `;
 
-const PopupImage = styled.img`
-  position: absolute;
-  width: 70%; /* Adjust image size */
-  pointer-events: none; /* Prevent the popup from blocking hover events */
-  z-index: 10;
-  display: ${(props) => (props.visible ? 'block' : 'none')};
-  top: ${(props) => `${props.y}px`};
-  left: ${(props) => `${props.x}px`};
-  transform: translate(-50%, -50%); /* Center the image at the cursor */
-`;
-
 const Area = styled.div`
     position: absolute;
     width: 50%;
@@ -298,6 +294,17 @@ const Area = styled.div`
         cursor: none, auto; }
     }
 `;
+
+const SimpleText = styled.h1`
+  font-family: 'PP Neue Montreal', sans-serif;                                          
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #ece8e8;
+  opacity: 0.7;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+`
 
 const Diagram = () => {
     const [isInsideCircle, setIsInsideCircle] = useState(false);
@@ -382,6 +389,7 @@ const Diagram = () => {
       style={{ cursor: isInsideCircle ? 'none' : 'default' }}
     >
     <Header></Header>
+    <SimpleText>Explore Intersecting Areas</SimpleText>
         {!isMobile ? (
             <VennDiagram
               onMouseEnter={handleEnterCircle}
@@ -463,9 +471,28 @@ const Diagram = () => {
             />
             </VennDiagram>
         ) : (
-            <VideoBackground src="src/default.mp4" autoPlay loop muted show />
+          <VennDiagram>
+            <Circle className="circle1">
+            <div>
+                <TextH3>TOWARD</TextH3>
+                <Title>Social Justice</Title>
+            </div>
+            </Circle>
+            <Circle className="circle2">
+            <div>
+                <TextH3>BY</TextH3>
+                <Title>Scalable Interaction</Title>
+            </div>
+            </Circle>
+            <Circle className="circle3">
+            <div>
+                <TextH3>OF</TextH3>
+                <Title>AI + DATA</Title>
+            </div>
+            </Circle>
+            </VennDiagram>
         )}
-        <DashedLine/>
+        <DashedLine/> 
         <Description>
           <RoleNot>{hoverSection ? areaContent[hoverSection].default : 'Saetbyeol Leeyouk'}</RoleNot>{' '}
           <Question>
@@ -473,7 +500,6 @@ const Diagram = () => {
               ? areaContent[hoverSection].question
               : ' '}<br></br>
           </Question>
-          <br></br>
           <HighlightedText onClick={handleScrollToSummary}>
           LEARN MORE <FaArrowDown />
         </HighlightedText>

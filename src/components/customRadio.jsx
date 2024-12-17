@@ -14,6 +14,9 @@ const StyledLabel = styled.label`
   &:hover {
     color: #2b2a2a;
   }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 // Hidden radio input
@@ -36,6 +39,10 @@ const CustomRadio = styled.span`
   ${HiddenRadio}:checked + & {
     border-color: #ff6035; /* Border color for checked state */
     background-color: #ff6035;
+  }
+  @media (max-width: 768px) {
+    width: 8px;
+    height: 8px;
   }
 `;
 

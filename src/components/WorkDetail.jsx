@@ -4,6 +4,9 @@ import { useParams , useNavigate } from 'react-router-dom';
 import Header from './Header';
 import CustomCursorTwo from './cursor-2';
 import projects, { getProjectById } from './projectData';
+import { FaGithub } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
+import ImageSlider from './ImageSlider';
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -29,13 +32,17 @@ const PrjScreen = styled.div`
 
 const ThumbnailWrapper = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 40%;
   border-radius: 8px;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 2rem 0 auto;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 1rem 0 auto;
+  }
 `;
 
 const Thumbnail = styled.img`
@@ -53,7 +60,7 @@ const StickyWrapper = styled.div`
 `;
 
 const Intro = styled.div`
-  width: 70%;
+  width: 80%;
   text-align: center;
   padding: ${(props) => (props.isScrolled ? '1rem 0' : '2rem 0')};
   transition: all 0.3s ease-in-out;
@@ -73,6 +80,9 @@ const PrjTitle = styled.div`
     color: #2b2a2a;
     margin: 0;
     transition: font-size 0.3s ease-in-out;
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   .year {
@@ -80,6 +90,13 @@ const PrjTitle = styled.div`
     color: #757474;
     margin-top: 2rem;
     transition: font-size 0.3s ease-in-out;
+    @media (max-width: 768px) {
+      margin-top: 1rem;
+      font-size: 0.5em;
+    }
+  }
+  @media (max-width: 768px) {
+    gap: 0.1rem;
   }
 `;
 
@@ -90,6 +107,9 @@ const Question = styled.div`
   color: #ff6035;
   margin-top: 1rem;
   transition: font-size 0.3s ease-in-out;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const TagItem = styled.div`
@@ -101,23 +121,32 @@ const TagItem = styled.div`
 `;
 
 const Tag = styled.div`
+  display: inline-flex; /* Ensures text and icon are inline */
+  align-items: center; /* Aligns items vertically */
+  justify-content: center; /* Centers content horizontally */
   font-family: 'Cygnito Mono', monospace;
   background-color: rgba(217, 217, 217, 0.3);
   border-radius: 4px;
   text-align: center;
-  display: inline-block;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   padding: 0.4rem 1rem;
   color: #757474;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
 `;
 
 const PDFLink = styled.a`
+  display: inline-flex; /* Ensures text and icon are inline */
+  align-items: center; /* Aligns items vertically */
+  justify-content: center; /* Centers content horizontally */
   font-family: 'Cygnito Mono', monospace;
-  width: 8rem;
   text-align: center;
-  display: inline-block;
-  padding: 0.5rem 1rem;
+  width: 7rem;
+  padding: 0.5rem 0.5rem;
   background: transparent;
   color: #757474;
   font-size: 1rem;
@@ -130,6 +159,44 @@ const PDFLink = styled.a`
     color: #f8f9fa;
     background: #757474;
   }
+  svg {
+    margin-right: 0.3rem; /* Add spacing between text and icon */
+  }
+  @media (max-width: 768px) {
+    width: 5rem;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
+`;
+
+const GitLink = styled.a`
+  display: inline-flex; /* Ensures text and icon are inline */
+  align-items: center; /* Aligns items vertically */
+  justify-content: center; /* Centers content horizontally */
+  font-family: 'Cygnito Mono', monospace;
+  text-align: center;
+  width: 7rem;
+  padding: 0.5rem 0.5rem;
+  background: transparent;
+  color: #757474;
+  font-size: 1rem;
+  border: #757474 1px solid;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    color: #f8f9fa;
+    background: #757474;
+  }
+  svg {
+    margin-right: 0.3rem; /* Add spacing between text and icon */
+  }
+  @media (max-width: 768px) {
+    width: 5rem;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
 `;
 
 
@@ -137,14 +204,17 @@ const ProjectInfo = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   justify-content: center;
   margin: 4rem 0rem;
 `;
 
 const PrjIntroInfo = styled.div`
-  width: 20%;
+  width: 80%;
   text-align: center;
+  padding-bottom: 1rem;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const BasicTitle = styled.h3`
@@ -154,6 +224,11 @@ const BasicTitle = styled.h3`
   color: #757474;
   opacity: 0.7;
   text-align: left;
+  padding-left: 0.5rem;
+  border-left: #757474 4px solid;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const BasicDescripList = styled.ul`
@@ -170,41 +245,67 @@ const BasicDescrip = styled.li`
   text-align: left;
   position: relative;
   padding-left: 1.2rem; /* Add space for the custom dot */
-  margin-bottom: 0.5rem; /* Add space between list items */
-
+  margin-bottom: 0.3rem; /* Add space between list items */
   &::before {
     content: '•'; /* Custom dot */
     position: absolute;
     left: 0;
     color: #000; /* Adjust the dot color */
   }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const DetailSection = styled.div`
   width: 80%;
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
+  text-align: justify;
+  white-space: pre-line;
   gap: 1rem;
   font-family: 'PP Neue Montreal', sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #2b2a2a;
+  span {
+    font-weight: bold; 
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+  }
 `;
+
+const ApproachItem = styled.div`
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #2b2a2a;
+
+  span {
+    font-weight: 600; /* Bold 스타일 적용 */
+  }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;
+
 
 const DetailItem = styled.div`
   display: inline-block;
-  width: 100%;
-  text-align: justify;
+  text-align: center;
+  wdith: 100%;
 
-  img,
-  video {
-    width: 100%;
+  img, video {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   video {
+    height: 600px;
     controls: true;
   }
 `;
@@ -219,6 +320,9 @@ const NextPrjScreen = styled.div`
   margin-top: 8rem;
   padding: 2rem;
   gap: 2rem; /* Space between text and thumbnail */
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const NextQ = styled.div`
@@ -236,11 +340,20 @@ const NextQ = styled.div`
     font-size: 1.5rem;
     color: #ff6035;
     margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 
   .nextq {
     font-size: 1,5rem;
     color: #757474;
+  }
+  @media (max-width: 768px) {
+    padding-left: 0;
+    width: 80%;
+    text-align: center;
   }
 `;
 
@@ -251,6 +364,10 @@ const NextPrj = styled.div`
   align-items: center;
   filter: blur(5px);
   padding-right: 10%;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-right: 0;
+  }
 `;
 
 const ThumbnailWrapper2 = styled.div`
@@ -307,8 +424,13 @@ const ProjectDetail = () => {
             ))}
             {project.pdfLink && (
               <PDFLink href={project.pdfLink} target="_blank" rel="noopener noreferrer">
-                View Details
+                <FiArrowUpRight/>View PDF
               </PDFLink>
+            )}
+            {project.gitLink && (
+              <GitLink href={project.gitLink} target="_blank" rel="noopener noreferrer">
+              <FaGithub/>View Git
+              </GitLink>
             )}
           </TagItem>
         </Intro>
@@ -322,17 +444,6 @@ const ProjectDetail = () => {
             <BasicDescripList>
               {project.roles.map((role, index) => (
                 <BasicDescrip key={index}>{role}</BasicDescrip>
-              ))}
-            </BasicDescripList>
-          </PrjIntroInfo>
-        )}
-
-        {project.credits && project.credits.length > 0 && (
-          <PrjIntroInfo>
-            <BasicTitle>CREDITS</BasicTitle>
-            <BasicDescripList>
-              {project.credits.map((credit, index) => (
-                <BasicDescrip key={index}>{credit}</BasicDescrip>
               ))}
             </BasicDescripList>
           </PrjIntroInfo>
@@ -359,10 +470,26 @@ const ProjectDetail = () => {
             </BasicDescripList>
           </PrjIntroInfo>
         )}
+
+        {project.credits && project.credits.length > 0 && (
+          <PrjIntroInfo>
+            <BasicTitle>CREDITS</BasicTitle>
+            <BasicDescripList>
+              {project.credits.map((credit, index) => (
+                <BasicDescrip key={index}>{credit}</BasicDescrip>
+              ))}
+            </BasicDescripList>
+          </PrjIntroInfo>
+        )}
       </ProjectInfo>
 
         <DetailSection>
-            {project.motivation}
+        <BasicTitle>MOTIVATION</BasicTitle>
+          {project.motivation.map((item, index) => (
+              <ApproachItem key={index}>
+                <span>{item.label}</span> {item.description}
+              </ApproachItem>
+            ))}
             {project.motivationSrc.map((src, index) => {
               console.log('SRC VALUE:', src); // Debugging line to see the exact value of 'src'
               
@@ -372,7 +499,7 @@ const ProjectDetail = () => {
                   {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com')? (
                     <iframe
                       width="100%"
-                      height="600"
+                      height="400px"
                       src={src} // Convert to embed if needed
                       title={`YouTube Video ${index + 1}`}
                       frameBorder="0"
@@ -389,7 +516,12 @@ const ProjectDetail = () => {
                 </DetailItem>
               );
             })}
-            {project.approach}
+            <BasicTitle>APPROACH</BasicTitle>
+            {project.approach.map((item, index) => (
+              <ApproachItem key={index}>
+                <span>{item.label}</span> {item.description}
+              </ApproachItem>
+            ))}
             {project.approachSrc.map((src, index) => {
               console.log('SRC VALUE:', src); // Debugging line to see the exact value of 'src'
               
@@ -399,7 +531,7 @@ const ProjectDetail = () => {
                   {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com')? (
                     <iframe
                       width="100%"
-                      height="600"
+                      height="400px"
                       src={src} // Convert to embed if needed
                       title={`YouTube Video ${index + 1}`}
                       frameBorder="0"
@@ -416,10 +548,10 @@ const ProjectDetail = () => {
                 </DetailItem>
               );
             })}
-
-
-
         </DetailSection>
+        {project.additionalSrc && project.additionalSrc.length > 1 && (
+        <ImageSlider sources={project.additionalSrc}/>
+      )}
       </PrjScreen>
       <NextPrjScreen
         onClick={() => handleProjectClick(nextProject.id)}
@@ -434,7 +566,7 @@ const ProjectDetail = () => {
             isPopupHovered={isPopupHovered} 
         />}
         <NextQ>
-            <span className="nextq">NEXT PROJECT</span>
+            <BasicTitle>NEXT PROJECT</BasicTitle>
             <h1>{nextProject.question}</h1>
         </NextQ>
         <NextPrj>

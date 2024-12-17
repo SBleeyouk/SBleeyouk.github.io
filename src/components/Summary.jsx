@@ -28,6 +28,9 @@ const IntroSection = styled.div`
     align-items: flex-start;
     justify-content: center;
     text-align: left;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const BigTitle = styled.h1`
@@ -38,11 +41,21 @@ const BigTitle = styled.h1`
   margin-top: 0;
   width: 50%;
   text-align: left;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
 `;
 
 const IntroBox = styled.div`
     width: 40%;
     margin-left: 10%;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0%;
+  }
 `;
 
 const Intro = styled.p`
@@ -63,6 +76,9 @@ const Intro = styled.p`
     font-style: italic;
     text-decoration: underline #ff6035 1px solid;
     color: #2b2a2a;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
   }
 `;
 
@@ -85,7 +101,7 @@ const ApproachList = styled.div`
   text-align: center;
   width: 90%; /* Centered width */
   gap: 2rem; /* Space between items */
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 `;
 
 const ApproachItem = styled.div`
@@ -97,6 +113,9 @@ const ApproachItem = styled.div`
   box-sizing: border-box; /* Include padding in width */
   text-align: left;
   gap: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ApproachNum = styled.div`
@@ -109,7 +128,6 @@ const ApproachNum = styled.div`
 `
 
 const GifContainer = styled.div`
-  
   width: 150px; /* Fixed width */
   height: 150px; /* Matches width to make it a square */
   position: relative;
@@ -135,6 +153,9 @@ const ApproachDetails = styled.div`
   padding: 0; /* Remove any padding that may push content down */
   margin: 0; /* Remove any margin */
   box-sizing: border-box; /* Ensure padding/margin are included in width/height */
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const ApproachTitle = styled.h3`
@@ -159,6 +180,10 @@ const QuestionList = styled.ul`
   width: 40%;
   padding-left: 4%;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 0;
+  }
 `;
 
 const QuestionItem = styled.li`
@@ -170,6 +195,7 @@ const QuestionItem = styled.li`
   border: 1px white;
   &:hover {
     color: #ff6035; /* Yellow */
+    text-decoration:  underline #ff6035 1px solid;
   }
 
   &:hover::after {
@@ -187,6 +213,11 @@ const QuestionItem = styled.li`
     border: #ff6035 1px solid;
     background-position: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    color: #ff6035; /* Yellow */
+    text-decoration:  underline #ff6035 1px solid;
   }
 `;
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import CustomCursorTwo from './cursor-2';
-
+import { FaGithub } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const ProjectCard = styled.div`
   display: flex;
@@ -10,6 +11,9 @@ const ProjectCard = styled.div`
   margin: 1rem;
   overflow: hidden;
   text-align: left;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const ThumbnailWrapper = styled.div`
@@ -52,6 +56,10 @@ const ProjectDetails = styled.div`
 
     &:hover{
     color: #ff6035;
+    cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
     }
   }
     .year {
@@ -66,14 +74,20 @@ const ProjectDescrip = styled.p`
     font-size: 1.2rem;
     color: #757474;
     margin: 0.5rem 0;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
 `
 
 const PDFLink = styled.a`
+  display: inline-flex; /* Ensures text and icon are inline */
+  align-items: center; /* Aligns items vertically */
+  justify-content: center; /* Centers content horizontally */
   width: 5rem;
   text-align: center;
   display: inline-block;
   margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   background: transparent;
   color: #757474;
   font-size: 0.85rem;
@@ -86,9 +100,37 @@ const PDFLink = styled.a`
     color: #f8f9fa;
     background: #757474;
   }
+  svg {
+    margin-right: 0.3rem; /* Add spacing between text and icon */
+  }
 `;
 
-const PrjInfo = ({ thumbnail, title, description, year, pdfLink, onClick }) => {
+const GitLink = styled.a`
+  display: inline-flex; /* Ensures text and icon are inline */
+  align-items: center; /* Aligns items vertically */
+  justify-content: center; /* Centers content horizontally */
+  width: 5rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  background: transparent;
+  color: #757474;
+  font-size: 0.85rem;
+  border: #757474 1px solid;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    color: #f8f9fa;
+    background: #757474;
+  }
+  svg {
+    margin-right: 0.3rem; /* Add spacing between text and icon */
+  }
+`;
+
+const PrjInfo = ({ thumbnail, title, description, year, pdfLink, gitLink, onClick }) => {
     const [isPopupHovered, setIsPopupHovered] = useState(false);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   
@@ -113,12 +155,18 @@ const PrjInfo = ({ thumbnail, title, description, year, pdfLink, onClick }) => {
           >
             <Thumbnail src={thumbnail} alt={title} />
           </ThumbnailWrapper>
-          <ProjectDetails>
+          <ProjectDetails
+            onMouseEnter={() => setIsPopupHovered(true)}
+            onMouseLeave={() => setIsPopupHovered(false)}
+            onMouseMove={handleMouseMove}
+            style={{ cursor: isPopupHovered ? 'none' : 'default' }}
+          >
             <h3>{title}</h3>
             <span className="year">/ {year}</span>
           </ProjectDetails>
           <ProjectDescrip>{description}</ProjectDescrip>
-          {pdfLink && <PDFLink href={pdfLink} target="_blank">View Details</PDFLink>}
+          {gitLink && <GitLink href={gitLink} target="_blank"><FaGithub/>{' '}View Git</GitLink>}
+          {pdfLink && <PDFLink href={pdfLink} target="_blank"><FiArrowUpRight/>View PDF</PDFLink>}
         </ProjectCard>
       </>
     );

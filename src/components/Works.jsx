@@ -64,13 +64,16 @@ const Filters = styled.div`
   margin-bottom: 2rem;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    padding: 0rem 2rem;
+  }
 `;
 
 const FilterButton = styled.button`
   font-family: 'Cygnito Mono', monospace;
   font-weight: 600;
   line-height: 0.5rem;
-  color: ${(props) => (props.active ? '#ff6035' : 'rgba(255, 96, 53, 0.5)')};
+  color: ${(props) => (props.active ? '#ff6035' : 'rgba(255, 96, 53, 0.3)')};
   text-decoration: ${(props) => (props.active ? 'underline' : 'normal')};
   outline: transparent;
   background: none;
@@ -81,7 +84,7 @@ const FilterButton = styled.button`
   font-size: 1.5rem;
   transition: color 0.3s, font-style 0.3s, font-weight 0.3s;
 
-  &:hover {
+  &:hover, :active {
     text-decoration: underline;
     .project-count {
       visibility: visible; /* Show on hover */
@@ -95,6 +98,9 @@ const FilterButton = styled.button`
     color: rgba(255, 96, 53, 0.5); /* Muted color for count */
     position: absolute;
     margin-left: 0.2rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
@@ -119,6 +125,9 @@ const FilterRadio = styled.div`
   flex-direction: row;
   gap: 1rem;
   font-size: 1.2rem;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `
 
 const RadioBtn = styled.input`
@@ -217,13 +226,13 @@ const Projects = () => {
           description={project.shortDescription}
           year={project.year}
           pdfLink={project.pdfLink}
+          gitLink={project.gitLink}
           onClick={() => handleProjectClick(project.id)} // Pass onClick handler here
         />
         ))}
       </ProjectGrid>
     </ProjectScreen>
     <Footer>
-        <FooterText>© Saetbyeol LeeYouk created with React</FooterText>
       </Footer>
     </ProjectContainer>
     </motion.div>
