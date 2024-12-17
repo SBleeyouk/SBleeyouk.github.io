@@ -33,7 +33,7 @@ const PrjScreen = styled.div`
 const ThumbnailWrapper = styled.div`
   position: relative;
   width: 80%;
-  height: 40%;
+  height: 38%;
   border-radius: 8px;
   overflow: hidden;
   border-radius: 8px;
@@ -418,6 +418,7 @@ const ProjectDetail = () => {
   const nextProject = projects[nextIndex] || null;
     //const projectId = projects.find((p) => p.id.toString() === projectId);
   const handleProjectClick = (nextProjectIndex) => {
+    setIsPopupHovered(false);
     navigate(`/projects/${nextProjectIndex}`);
   };
   

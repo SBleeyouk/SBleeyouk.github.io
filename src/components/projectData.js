@@ -10,10 +10,10 @@ const projects = [
       gitLink: 'https://github.com/SBleeyouk/sixsense',
       thumbnail: '/src/thumbnail-01.gif ',
       thumbnailQeustion: '/src/thumbnail-01q.png',
-      question: 'How can we support individuals with autism disorder for training emotional communication?',
+      question: 'How can we support individuals with autism spectrum disorder for training emotional communication?',
       motivation: [{
         label: '',
-        description: 'Globally, 1 in 37 people is on the autism spectrum, and in South Korea, the registered population with autism spectrum disorder (ASD) has doubled over the past decade. Despite this, the average age of death for individuals with ASD in Korea is only 23.8 years, with suicide being the leading cause—often due to social isolation.\n Children with autism struggle with expressing and communicating emotions, which can lead to social and behavioral issues (Mayes et al., 2011) and inappropriate behaviors like self-harm and aggression (Folstein, 2012). However, emotional training facilities are concentrated in metropolitan areas, with prohibitively high costs of $1,500–$3,000 per month. Teachers in special education schools also highlight the difficulty of personalizing emotion training into structured curriculums, often limiting efforts to rote memorization of emotional vocabulary.\nTo address this issue, we developed <Mujigae>, an AI agent for daily, home-based emotional training tailored to children’s routines. <Mujigae> aims to improve emotional communication skills in children with autism through immersive learning environments and personalized curriculums. Additionally, by collecting biometric data, the system facilitates better communication between individuals with autism and society.'
+        description: 'Globally, 1 in 37 people is on the autism spectrum disorder(ASD), and in South Korea, the registered population with ASD has doubled over the past decade. Despite this, the average age of death for individuals with ASD in Korea is only 23.8 years old, with suicide being the leading cause—often due to social isolation.\n Children with autism struggle with expressing and communicating emotions, which can lead to social and behavioral issues (Mayes et al., 2011) and inappropriate behaviors like self-harm and aggression (Folstein, 2012). However, emotional training facilities are concentrated in metropolitan areas, with prohibitively high costs of $1,500–$3,000 per month. Teachers in special education schools also highlight the difficulty of personalizing emotion training into structured curriculums, often limiting efforts to rote memorization of emotional vocabulary.\nTo address this issue, we developed <Mujigae>, an AI agent for daily, home-based emotional training tailored to children’s routines. <Mujigae> aims to improve emotional communication skills in children with autism through immersive learning environments and personalized curriculums. Additionally, by collecting biometric data, the system facilitates better communication between individuals with autism and society.'
       }
       ],
       approach: [
@@ -111,7 +111,7 @@ const projects = [
         approach: [
           {
             label: '',
-            description: 'To address these challenges, I developed <Fake the Deepfake>, an automated Telegram persona bot that integrates activists’ undercover tracking strategies. <Fake the Deepfake> engages perpetrators, gathers evidence shared in chat rooms, and collects profile information of participants. By automating key parts of the investigation process, <Fake the Deepfake> supports activists and investigators in tracking digital sexual crime cartels while mitigating their exposure to harmful content and reducing emotional burden. This project is targeting 2025 FAccT.',
+            description: 'To address these challenges, I developed <Fake the Deepfake>, an automated Telegram persona bot that integrates activists’ undercover tracking strategies. <Fake the Deepfake> engages perpetrators, gathers evidence shared in chat rooms, and collects profile information of participants. By automating key parts of the investigation process, <Fake the Deepfake> supports activists and investigators in tracking digital sexual crime cartels while mitigating their exposure to harmful content and reducing emotional burden. This project is targeting 2026 FAccT.',
           },
         ],
         motivationSrc: [
@@ -315,7 +315,7 @@ const projects = [
     approachSrc: [
     ],
     roles: [
-      'Designed LVM based based on personalized video viewing system.',
+      'Designed interaction system with Language-Video Model(LVM) to enhance personalized learning experience.',
       'Researched on personalized learning path based on formative study findings and educational theories ("procedural flexibility" and "learning by comparison") and psychological theories ("metacognitive theories")',
       'Designed user studies, assessing system effectiveness and validating its impact',
       'Developed and optimized LVM-based prompt engineering to enhance system performance, ensuring clear information hierarchy and intuitive user interactions with a focus on usability and novelty'
