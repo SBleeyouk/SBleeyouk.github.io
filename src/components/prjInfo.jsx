@@ -50,6 +50,7 @@ const ProjectDetails = styled.div`
   color: #2b2a2a;
 
   h3 {
+    max-width: 85%;
     font-size: 1.5rem;
     font-weight: bold;
     margin:0;
@@ -67,6 +68,10 @@ const ProjectDetails = styled.div`
         color: #757474;
         margin-top: 0.8rem;
         margin-left: 0.5rem;
+    @media (max-width: 768px) {
+      margin-top: 0.5rem;
+      font-size: 0.5em;
+    }
   }
 `;
 

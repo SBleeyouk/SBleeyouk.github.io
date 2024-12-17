@@ -74,6 +74,7 @@ const PrjTitle = styled.div`
   align-items: center;
 
   h1 {
+    max-width: 85%;
     font-family: 'PP Neue Montreal', sans-serif;
     font-weight: 500;
     font-size: 3rem;
@@ -91,7 +92,7 @@ const PrjTitle = styled.div`
     margin-top: 2rem;
     transition: font-size 0.3s ease-in-out;
     @media (max-width: 768px) {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       font-size: 0.5em;
     }
   }

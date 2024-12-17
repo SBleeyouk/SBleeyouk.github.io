@@ -272,14 +272,13 @@ const Projects = () => {
       {filterApproach === 'question' ? (
         <ProjectList>
           {filteredProjects.map((project) => (
-            <ListItem key={project.id} onClick={() => console.log(`Go to project ${project.id}`)}>
+            <ListItem key={project.id} onClick={() => handleProjectClick(project.id)}>
             <div className="content">
             <span className="year">{project.year}</span>
             <span className="question">{project.question}</span>
             <span className="description">{project.shortDescription}</span>
             </div>
             <img src={project.thumbnail} alt={project.title} />
-            onClick={() => handleProjectClick(project.id)}
             </ListItem>
           ))}
         </ProjectList>
