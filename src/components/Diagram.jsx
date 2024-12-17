@@ -6,6 +6,7 @@ import { Title, TextH3, HighlightedText } from './Typo';
 import Header from './Header';
 import CustomCursor from './cursor';
 import { FaArrowDown } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 
 const DiagramContainer = styled.div`
@@ -311,8 +312,16 @@ const Diagram = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [hoverSection, setHoverSection] = useState(null);
     const [hoveringName, setHoveringName] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleProjectClick = (projectId) => {
+      navigate(`/projects/${projectId}`);
+    };
+
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     const summaryRef = useState(null);
+
 
     const areaContent = {
       area1: {
@@ -419,21 +428,25 @@ const Diagram = () => {
             className="area1"
             onMouseEnter={() => handleHover('area1')}
             onMouseLeave={() => handleHover(null)}
+            onClick={() => navigate(`/projects/4`)}
             />
             <InteractionArea
             className="area2"
             onMouseEnter={() => handleHover('area2')}
             onMouseLeave={() => handleHover(null)}
+            onClick={() => navigate(`/projects/7`)}
             />
             <InteractionArea
             className="area3"
             onMouseEnter={() => handleHover('area3')}
             onMouseLeave={() => handleHover(null)}
+            onClick={() => navigate(`/projects/2`)}
             />
             <InteractionArea
             className="area4"
             onMouseEnter={() => handleHover('area4')}
             onMouseLeave={() => handleHover(null)}
+            onClick={() => navigate(`/projects/1`)}
             />
             <Area
             className="area5"
