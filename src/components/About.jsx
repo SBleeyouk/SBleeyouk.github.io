@@ -388,9 +388,9 @@ function Projects() {
       <CVFrame
           src="https://drive.google.com/file/d/1mwWmZUPnC143_vt-6B6l4Za7M1qq5Nuv/preview" allow="autoplay">
         </CVFrame>
-      <Footer>
-        <FooterText></FooterText>
-      </Footer>
+    <Footer>
+      <FooterText>© Copyright 2024 Saetbyeol LeeYouk | Last updated: December 13, 2024</FooterText>
+    </Footer>
     </AboutContainer>
     </motion.div>
     

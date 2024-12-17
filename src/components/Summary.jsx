@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import projects from './projectData';
 import { RxExternalLink } from "react-icons/rx";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useMediaQuery } from 'react-responsive';
 
 const SummaryContainer = styled.div`
   display: flex; /* Enable flexbox */
@@ -44,7 +45,6 @@ const BigTitle = styled.h1`
   @media (max-width: 768px) {
     width: 100%;
     margin-left: 0%;
-    margin-top: 1rem;
     font-size: 2.5rem;
   }
 `;
@@ -242,6 +242,7 @@ const Summary = () => {
     const [hoveredApproachId, setHoveredApproachId] = useState(null);
     const [isPopupHovered, setIsPopupHovered] = useState(false);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     
     const navigate = useNavigate();
 
@@ -331,13 +332,15 @@ const Summary = () => {
             onMouseLeave={() => setHoveredApproachId(null)} // Reset when mouse leaves
           >
             <GifContainer>
-            <Image
-                src={
-                    hoveredApproachId === approach.id
-                  ? approach.gif // Show GIF if hovered
-                  : approach.staticImage // Show static image otherwise
-                }
-                alt="GIF Box"
+            <Image 
+              src={
+                isMobile 
+                  ? approach.gif // Mobile: always show the GIF
+                  : hoveredApproachId === approach.id 
+                    ? approach.gif // Desktop: show GIF if hovered
+                    : approach.staticImage // Otherwise, show static image
+              }
+              alt="GIF Box"
             />
             </GifContainer>
             <ApproachNum>00{approach.id}</ApproachNum>
@@ -377,9 +380,9 @@ const Summary = () => {
       <HighlightedTextTwo onClick = {() => navigate(`/projects`)}>
         VIEW MORE PROJECTS <FiArrowUpRight />
         </HighlightedTextTwo>
-      <Footer>
-        <FooterText>© Saetbyeol LeeYouk created with React</FooterText>
-      </Footer>
+    <Footer>
+      <FooterText>© Copyright 2024 Saetbyeol LeeYouk | Last updated: December 13, 2024</FooterText>
+    </Footer>
     </SummaryContainer>
     </>
   );

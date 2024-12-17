@@ -233,7 +233,8 @@ const Projects = () => {
       </ProjectGrid>
     </ProjectScreen>
     <Footer>
-      </Footer>
+      <FooterText>© Copyright 2024 Saetbyeol LeeYouk | Last updated: December 13, 2024</FooterText>
+    </Footer>
     </ProjectContainer>
     </motion.div>
     </>

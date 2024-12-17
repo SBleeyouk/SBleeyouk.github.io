@@ -199,23 +199,24 @@ const GitLink = styled.a`
   }
 `;
 
-
 const ProjectInfo = styled.div`
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start; /* 아이템을 왼쪽으로 정렬 */
   margin: 4rem 0rem;
-`;
-
-const PrjIntroInfo = styled.div`
-  width: 80%;
-  text-align: center;
-  padding-bottom: 1rem;
+  gap: 2rem;
   @media (max-width: 768px) {
     width: 100%;
   }
 `;
+
+const PrjIntroInfo = styled.div`
+  width: 45%;
+  text-align: left; /* 내부 텍스트 왼쪽 정렬 */
+  padding-bottom: 1rem;
+`;
+
 
 const BasicTitle = styled.h3`
   font-family: 'PP Neue Montreal', sans-serif;
@@ -388,6 +389,15 @@ const Thumbnail2 = styled.img`
   border-radius: 8px;
 `;
 
+const ResponsiveIframe = styled.iframe`
+  width: 100%;
+  height: 600px; /* Default height for desktop */
+
+  @media (max-width: 768px) {
+    height: 200px; /* Adjust height for mobile */
+  }
+`;
+
 const ProjectDetail = () => {
   const { projectId } = useParams();
   const navigate = useNavigate();
@@ -448,6 +458,16 @@ const ProjectDetail = () => {
             </BasicDescripList>
           </PrjIntroInfo>
         )}
+                {project.credits && project.credits.length > 0 && (
+          <PrjIntroInfo>
+            <BasicTitle>CREDITS</BasicTitle>
+            <BasicDescripList>
+              {project.credits.map((credit, index) => (
+                <BasicDescrip key={index}>{credit}</BasicDescrip>
+              ))}
+            </BasicDescripList>
+          </PrjIntroInfo>
+        )}
 
         {project.awards && project.awards.length > 0 && (
           <PrjIntroInfo>
@@ -471,16 +491,6 @@ const ProjectDetail = () => {
           </PrjIntroInfo>
         )}
 
-        {project.credits && project.credits.length > 0 && (
-          <PrjIntroInfo>
-            <BasicTitle>CREDITS</BasicTitle>
-            <BasicDescripList>
-              {project.credits.map((credit, index) => (
-                <BasicDescrip key={index}>{credit}</BasicDescrip>
-              ))}
-            </BasicDescripList>
-          </PrjIntroInfo>
-        )}
       </ProjectInfo>
 
         <DetailSection>
@@ -497,15 +507,13 @@ const ProjectDetail = () => {
                 <DetailItem key={index}>
                   {/* Check for YouTube Links */}
                   {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com')? (
-                    <iframe
-                      width="100%"
-                      height="400px"
+                    <ResponsiveIframe
                       src={src} // Convert to embed if needed
                       title={`YouTube Video ${index + 1}`}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
-                    ></iframe>
+                    />
                   ) : src.endsWith('.mp4') ? (
                     // Render local video files
                     <video src={src} controls width="100%" />
@@ -529,15 +537,13 @@ const ProjectDetail = () => {
                 <DetailItem key={index}>
                   {/* Check for YouTube Links */}
                   {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com')? (
-                    <iframe
-                      width="100%"
-                      height="400px"
+                    <ResponsiveIframe
                       src={src} // Convert to embed if needed
                       title={`YouTube Video ${index + 1}`}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
-                    ></iframe>
+                    />
                   ) : src.endsWith('.mp4') ? (
                     // Render local video files
                     <video src={src} controls width="100%" />
