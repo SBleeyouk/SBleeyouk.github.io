@@ -102,8 +102,8 @@ const Intro = styled.p`
     color: #2b2a2a;
   }
   @media (max-width: 768px) {
-    font-size: 1rem;
     text-align: left;
+    font-size: 1rem;
   }
 `;
 
@@ -121,14 +121,11 @@ const URL = styled.a`
   &:hover {
     color: #ff6035;
     text-decoration: underline;
-    .project-count {
+  .project-count {
       visibility: visible; /* Show on hover */
       opacity: 1; /* Smooth fade-in effect */
   }
   cursor: pointer;
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-  }
 `
 
 const CVFrame = styled.iframe`
@@ -259,12 +256,12 @@ const CollaboTitle = styled.div`
 
 export const Footer = styled.div`
     margin-top: 5%;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     margin-bottom: 2%;
 `
 
@@ -392,7 +389,7 @@ function Projects() {
           src="https://drive.google.com/file/d/1mwWmZUPnC143_vt-6B6l4Za7M1qq5Nuv/preview" allow="autoplay">
         </CVFrame>
     <Footer>
-      <FooterText>© Copyright 2024 Saetbyeol LeeYouk | Last updated: December 13, 2024</FooterText>
+      <FooterText>© Copyright 2024 Saetbyeol Leeyouk<br></br>Last updated: December 13, 2024</FooterText>
     </Footer>
     </AboutContainer>
     </motion.div>

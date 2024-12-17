@@ -13,7 +13,7 @@ const ProjectContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: #f8f9fa;
   box-sizing: border-box;
@@ -215,6 +215,9 @@ const PrjIntroInfo = styled.div`
   width: 45%;
   text-align: left; /* 내부 텍스트 왼쪽 정렬 */
   padding-bottom: 1rem;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 
@@ -312,7 +315,7 @@ const DetailItem = styled.div`
 `;
 
 const NextPrjScreen = styled.div`
-  width: 100%;
+  width: 80%;
   border-top: #757474 1px solid;
   display: flex;
   flex-direction: row;
@@ -347,9 +350,12 @@ const NextQ = styled.div`
     }
   }
 
-  .nextq {
-    font-size: 1,5rem;
+  h2 {
+    font-family: 'PP Neue Montreal', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
     color: #757474;
+    opacity: 0.7;
   }
   @media (max-width: 768px) {
     padding-left: 0;
@@ -359,7 +365,7 @@ const NextQ = styled.div`
 `;
 
 const NextPrj = styled.div`
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -572,7 +578,7 @@ const ProjectDetail = () => {
             isPopupHovered={isPopupHovered} 
         />}
         <NextQ>
-            <BasicTitle>NEXT PROJECT</BasicTitle>
+            <h2>NEXT PROJECT</h2>
             <h1>{nextProject.question}</h1>
         </NextQ>
         <NextPrj>

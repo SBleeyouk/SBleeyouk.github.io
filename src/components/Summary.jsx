@@ -29,6 +29,7 @@ const IntroSection = styled.div`
     align-items: flex-start;
     justify-content: center;
     text-align: left;
+    margin-top: 1.5rem;
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -157,6 +158,7 @@ const ApproachDetails = styled.div`
   box-sizing: border-box; /* Ensure padding/margin are included in width/height */
   @media (max-width: 768px) {
     width: 100%;
+    text-align: left;
   }
 `;
 
@@ -225,12 +227,12 @@ const QuestionItem = styled.li`
 
 export const Footer = styled.div`
     margin-top: 5%;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    text-align: left;
+    text-align: center;
 `
 
 export const FooterText = styled.p`
@@ -310,7 +312,7 @@ const Summary = () => {
   return (
     <>
     <SummaryContainer
-    >  
+    >
     <IntroSection>
         <BigTitle>Question + Create technology as a force for justice</BigTitle>
         <IntroBox>
@@ -383,7 +385,7 @@ const Summary = () => {
         VIEW MORE PROJECTS <FiArrowUpRight />
         </HighlightedTextTwo>
     <Footer>
-      <FooterText>© Copyright 2024 Saetbyeol LeeYouk | Last updated: December 13, 2024</FooterText>
+      <FooterText>© Copyright 2024 Saetbyeol Leeyouk<br></br>Last updated: December 13, 2024</FooterText>
     </Footer>
     </SummaryContainer>
     </>

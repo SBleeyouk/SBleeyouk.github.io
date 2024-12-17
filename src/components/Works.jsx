@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PrjInfo from './prjInfo';
 import Header from './Header';
 import { useNavigate } from 'react-router-dom';
-import projects, { getProjectById } from './projectData';
+import projects from './projectData';
 import CustomRadioButton from './customRadio';
 import { motion } from 'framer-motion';
 
@@ -130,10 +130,6 @@ const FilterRadio = styled.div`
   }
 `
 
-const RadioBtn = styled.input`
-  type = 'radio';
-`
-
 const ProjectGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -141,14 +137,70 @@ const ProjectGrid = styled.div`
   justify-content: center;
 `;
 
+const ProjectList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: left;
+  align-items: center;
+`;
+
+const ListItem = styled.div`
+  width: 60%;
+  display: flex;
+  gap: 2rem;
+  align-items: left;
+  padding: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
+  img {
+    width: 20%;
+    height: 16%;
+    border-radius: 8px;
+  }
+
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .year {
+    font-size: 0.85rem;
+    color: #757474;
+    margin-bottom: 0.2rem;
+  }
+
+  .question {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #2b2a2a;
+    &: hover {
+      color: #ff6035;
+    }
+  }
+
+  .description {
+    font-size: 1rem;
+    color: #757474;
+  }
+`;
+
 export const Footer = styled.div`
     margin-top: 5%;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     margin-bottom: 2%;
 `
 
@@ -217,7 +269,22 @@ const Projects = () => {
           />
       </FilterRadio>
       </Filters>
-      <ProjectGrid>
+      {filterApproach === 'question' ? (
+        <ProjectList>
+          {filteredProjects.map((project) => (
+            <ListItem key={project.id} onClick={() => console.log(`Go to project ${project.id}`)}>
+            <div className="content">
+            <span className="year">{project.year}</span>
+            <span className="question">{project.question}</span>
+            <span className="description">{project.shortDescription}</span>
+            </div>
+            <img src={project.thumbnail} alt={project.title} />
+            </ListItem>
+          ))}
+        </ProjectList>
+
+      ):(
+        <ProjectGrid>
         {filteredProjects.map((project) => (
           <PrjInfo
           key={project.id}
@@ -231,9 +298,10 @@ const Projects = () => {
         />
         ))}
       </ProjectGrid>
+      )}
     </ProjectScreen>
     <Footer>
-      <FooterText>© Copyright 2024 Saetbyeol LeeYouk | Last updated: December 13, 2024</FooterText>
+      <FooterText>© Copyright 2024 Saetbyeol Leeyouk<br></br>Last updated: December 13, 2024</FooterText>
     </Footer>
     </ProjectContainer>
     </motion.div>
