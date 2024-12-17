@@ -315,7 +315,8 @@ const projects = [
     approachSrc: [
     ],
     roles: [
-      'Designed LVM based based on personalized video viewing system founded on educational theories ("procedural flexibility" and "learning by comparison") and psychological theories ("metacognitive theories")',
+      'Designed LVM based based on personalized video viewing system.',
+      'Researched on personalized learning path based on formative study findings and educational theories ("procedural flexibility" and "learning by comparison") and psychological theories ("metacognitive theories")',
       'Designed user studies, assessing system effectiveness and validating its impact',
       'Developed and optimized LVM-based prompt engineering to enhance system performance, ensuring clear information hierarchy and intuitive user interactions with a focus on usability and novelty'
       ],
