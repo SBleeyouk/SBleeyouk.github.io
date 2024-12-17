@@ -93,7 +93,7 @@ const Intro = styled.p`
   font-size: 1.5rem;
   color: #2b2a2a;
   width: 100%;
-  text-align: left;
+  text-align: justify;
   span{
     color: #ff6035;
   }
@@ -103,6 +103,7 @@ const Intro = styled.p`
   }
   @media (max-width: 768px) {
     font-size: 1rem;
+    text-align: left;
   }
 `;
 
@@ -326,8 +327,10 @@ function Projects() {
               <Profile src="src/profile-2.jpg" alt="Profile Image" />
               <IntroBox>
                 <Intro>
-                <span>Saetbyeol Leeyouk</span> is a Critical Technologist dedicated to addressing the risks of emerging technologies. Drawing on critical theory and feminist epistemology, she designs, develops, and deploys scalable systems that support marginalized groups, including individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities. Her work focuses on fostering inclusive, technology-augmented self-identities that embrace and empower diverse identities.
-                <br></br><br></br>She is currently an undergraduate research intern at <a href='https://www.kixlab.org' target="_blank" rel="noopener noreferrer">KIXLAB (KAIST Interaction Lab)</a>, <br></br>pursuing a BAS in <a href='https://creative.sogang.ac.kr' target="_blank" rel="noopener noreferrer">Art & Technology</a> and a BS in Artificial Intelligence at Sogang University.
+                <span>Saetbyeol Leeyouk</span> is a Critical Technologist working at the intersection of social issues, AI engineering, and HCI research. 
+                She is currently an undergraduate research intern at <a href='https://www.kixlab.org' target="_blank" rel="noopener noreferrer">KIXLAB (KAIST Interaction Lab)</a>, pursuing a BAS in <a href='https://creative.sogang.ac.kr' target="_blank" rel="noopener noreferrer">Art & Technology</a> and a BS in Artificial Intelligence at Sogang University. 
+                <br></br><br></br>Acrossing fields as media artist and system developer, Saetbyeol is committed to addressing the risks of emerging technologies. Grounded in critical theory and feminist epistemology, she designs, develops, and deploys scalable systems that support marginalized groups, including individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities. 
+                Her work explores how technology augmented self-identities can empower and embrace diverse individuals while redefining the relationship between humans and machines through a queering perspective.
                 </Intro>
                 <URLbox>
                   <URL href='mailto:sbleeyouk@sogang.ac.kr' target="_blank" rel="noopener noreferrer"><MdEmail /></URL>

@@ -65,13 +65,14 @@ const Intro = styled.p`
   color: #2b2a2a;
   margin-bottom: 1rem; /* Add consistent spacing */
   width: 100%;
-  text-align: left;
+  text-align: justify;
 
   span{
     color: #ff6035;
     font-wieght: 700;
     font-style: italic;
   }
+
   a{
     font-style: italic;
     text-decoration: underline #ff6035 1px solid;
@@ -79,6 +80,7 @@ const Intro = styled.p`
   }
   @media (max-width: 768px) {
     font-size: 1.2rem;
+    text-align: left;
   }
 `;
 
@@ -144,7 +146,7 @@ const Image = styled.img`
 const ApproachDetails = styled.div`
   width: 40%;
   flex: 2;
-  text-align: left;
+  text-align: justify;
   display: flex;
   flex-direction: column; /* Ensure the content stacks vertically */
   justify-content: flex-start; /* Align content to the top */
@@ -313,7 +315,7 @@ const Summary = () => {
         <BigTitle>Question + Create technology as a force for justice</BigTitle>
         <IntroBox>
             <Intro>
-            Saetbyeol Leeyouk is a <span>Critical Technologist</span> dedicated to addressing the risks of emerging technologies. Drawing on critical theory and feminist epistemology, she designs, develops, and deploys scalable systems that support marginalized groups, including individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities. Her work focuses on fostering inclusive, technology-augmented self-identities that embrace and empower diverse identities.
+            Saetbyeol Leeyouk is a <span>Critical Technologist</span> bridging social issues, AI engineering, and HCI research. As a media artist and system developer, she builds scalable systems to empower marginalized groups <span style={{ fontStyle: 'none', fontWeight: '300', color: '#757474' }}>- individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities -</span> and redefine human - machine relationships through critical and inclusive perspectives.
             <br></br><br></br>She is currently an undergraduate research intern at <a href='https://www.kixlab.org' target="_blank" rel="noopener noreferrer">KIXLAB (KAIST Interaction Lab)</a>, <br></br>pursuing a BAS in <a href='https://creative.sogang.ac.kr' target="_blank" rel="noopener noreferrer">Art & Technology</a> and a BS in Artificial Intelligence at Sogang University.
             </Intro>
         </IntroBox>
