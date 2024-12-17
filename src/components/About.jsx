@@ -165,7 +165,6 @@ const ApproachList = styled.div`
 const ApproachItem = styled.div`
   display: flex;
   flex-direction: column;
-  height: auto;
   align-items: flex-start; /* Align content at the top */
   padding: 1rem;
   border-left: 1px solid #ff6035;
@@ -201,7 +200,7 @@ const Image = styled.img`
 
 const ApproachDetails = styled.div`
   width: 100%;
-  flex: 2;
+  height: 12rem;
   text-align: left;
   display: flex;
   flex-direction: column; /* Ensure the content stacks vertically */
@@ -215,6 +214,7 @@ const ApproachDetails = styled.div`
 
 const ApproachTitle = styled.h3`
     display: flex;
+    height: 4rem;
     flex-direction: column;
     justify-content: flex-start;
     font-size: 1.5rem;
@@ -289,7 +289,7 @@ function Projects() {
             {
               id: 2,
               title: 'Research Through Marginalized Perspectives',
-              description: 'I tackle complex technological challenges by centering marginalized voices. These individuals, excluded from mainstream narratives, hold creative and alternative visions for the future. My approach focuses on translating their imaginations, solutions, and methodologies into scalable, impactful systems.',
+              description: 'I tackle complex technological challenges by centering marginalized voices. Individuals excluded from mainstream narratives hold creative and alternative visions for the future. I translate their imaginations, solutions, and methodologies into scalable, impactful systems.',
               gif: 'src/approach02.png',
               staticImage: 'src/approach02.png',
               questions: [

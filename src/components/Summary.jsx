@@ -147,7 +147,7 @@ const Image = styled.img`
 const ApproachDetails = styled.div`
   width: 40%;
   flex: 2;
-  text-align: justify;
+  text-align: left;
   display: flex;
   flex-direction: column; /* Ensure the content stacks vertically */
   justify-content: flex-start; /* Align content to the top */

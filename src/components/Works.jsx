@@ -279,6 +279,7 @@ const Projects = () => {
             <span className="description">{project.shortDescription}</span>
             </div>
             <img src={project.thumbnail} alt={project.title} />
+            onClick={() => handleProjectClick(project.id)}
             </ListItem>
           ))}
         </ProjectList>
