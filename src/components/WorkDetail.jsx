@@ -33,7 +33,7 @@ const PrjScreen = styled.div`
 const ThumbnailWrapper = styled.div`
   position: relative;
   width: 80%;
-  height: 38%;
+  height: auto;
   border-radius: 8px;
   overflow: hidden;
   border-radius: 8px;
@@ -305,7 +305,6 @@ const DetailItem = styled.div`
   wdith: 100%;
 
   img, video {
-    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 

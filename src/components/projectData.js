@@ -87,10 +87,13 @@ const projects = [
         },
       ],
       motivationSrc: [
-
+        '/src/prj02-detail-01.png',
+        '/src/prj02-detail-02.png',
+        '/src/prj02-detail-03.png',
       ],
       approachSrc: [
-
+        '/src/prj02-detail-04.png',
+        '/src/prj02-detail-05.png',
       ],
       additionalSrc: [
       ],
