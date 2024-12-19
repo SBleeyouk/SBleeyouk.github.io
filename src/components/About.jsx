@@ -214,6 +214,7 @@ const ApproachDetails = styled.div`
 
 const ApproachTitle = styled.h3`
     display: flex;
+    height: 4rem;
     flex-direction: column;
     justify-content: flex-start;
     font-size: 1.5rem;

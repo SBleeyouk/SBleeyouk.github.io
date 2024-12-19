@@ -41,12 +41,18 @@ const projects = [
       motivationSrc: [
         'https://www.youtube.com/embed/NLXxJixbfCA?si=E3sNHadrIll1lJC5',
         '/src/prj01-detail-01.png',
+        '/src/prj01-detail-02.png',
       ],
       approachSrc: [
+        '/src/prj01-detail-03.png',
+        '/src/prj01-detail-04.png',
+        '/src/prj01-detail-05.jpg',
+        '/src/prj01-detail-06.jpg',
+        '/src/prj01-detail-07.png',
       ],
       additionalSrc: [
       ],
-      roles: ['Team Lead', 'AI Engineer for fine-tuning Language-Music Generation Model (Meta MusicGen)', 'Full-Stack Web Developer', 'Researcher conducting formative studies and system evaluations in a special school'],
+      roles: ['Team Lead', 'AI Engineer for fine-tuning Language-Music Generation Model (Meta MusicGen)', 'Full-stack web developer integrating gaze and face landmark tracking.', 'Researcher conducting formative studies and system evaluations in a special school'],
       credits:['Jimin Yoon', 'Jeunghyun Kim', 'Sumin Kim', 'Advised by Jeonguk Ha'],
       awards:['National Capstone Design Awards, National Research Foundation&Ministry of Education','IITP President’s Award, GenAI SW Competition, Ministry of Science and ICT', 'Grand Award, Sogang Integrated Technology & Engineering Contest'],
       funded:['National Research Foundation(NRF)'],

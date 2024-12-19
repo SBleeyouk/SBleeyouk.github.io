@@ -193,6 +193,14 @@ const ListItem = styled.div`
   }
 `;
 
+const DescriptionList = styled.div`
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #757474;
+  line-height: 1.5rem; /* Adjust line spacing */
+`;
+
 export const Footer = styled.div`
     margin-top: 5%;
     width: 80%;
@@ -276,7 +284,16 @@ const Projects = () => {
             <div className="content">
             <span className="year">{project.year}</span>
             <span className="question">{project.question}</span>
-            <span className="description">{project.shortDescription}</span>
+            {project.funded && project.funded.length > 0 && (
+            <DescriptionList>
+              {project.funded.map((fund, index) => (
+                <span key={index}>
+                  {fund}
+                  <br />
+                </span>
+              ))}
+            </DescriptionList>
+          )}
             </div>
             <img src={project.thumbnail} alt={project.title} />
             </ListItem>

@@ -514,7 +514,7 @@ const ProjectDetail = () => {
               return (
                 <DetailItem key={index}>
                   {/* Check for YouTube Links */}
-                  {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com')? (
+                  {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com') ? (
                     <ResponsiveIframe
                       src={src} // Convert to embed if needed
                       title={`YouTube Video ${index + 1}`}
@@ -544,7 +544,7 @@ const ProjectDetail = () => {
               return (
                 <DetailItem key={index}>
                   {/* Check for YouTube Links */}
-                  {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com')? (
+                  {src.includes('youtube.com') || src.includes('youtu.be') || src.includes('vimeo.com') ? (
                     <ResponsiveIframe
                       src={src} // Convert to embed if needed
                       title={`YouTube Video ${index + 1}`}

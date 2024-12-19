@@ -14,11 +14,12 @@ const SlidesWrapper = styled.div`
   transition: transform 0.5s ease-in-out;
   transform: translateX(${(props) => -100 * props.currentIndex}%);
   margin: 0 -1rem; /* Adds space to show adjacent images */
+  border-radius: 8px;
 `;
 
 const Slide = styled.div`
-  flex: 0 0 calc(100% / 1.2); /* Adjust slide width to show next/prev images */
-  margin: 0 1rem; /* Adds spacing between slides */
+  flex: 0 0 calc(100% / 1); /* Adjust slide width to show next/prev images */
+  margin: 0 0rem; /* Adds spacing between slides */
   position: relative;
 
   img, video, iframe {
