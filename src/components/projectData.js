@@ -138,7 +138,7 @@ const projects = [
       year: '2023',
       tag: ['AI', 'Social Justice', 'Media Art'],
       pdfLink: null,
-      thumbnail: '/src/thumbnail-03.gif',
+      thumbnail: 'https://storage.googleapis.com/saetbyeol-images/thumbnail-03.gif',
       question: "Can AI preserve and amplify civic society's collective memory of sexual slavery victims for the Japanese imperial army, after the last survivor is gone?",
       motivation: [{
         label: 'The subjects, contents, and conditions of collective memory are determined by society and are inherently subject to changes in the social environment, thus embodying a ‘reconstructive’ nature. As such, collective memory is actively reshaped through our practices of remembrance, and it plays a pivotal role in shaping our identity. (Maurice Halbwachs)\n\n',
@@ -359,39 +359,6 @@ const projects = [
     credits:['Haram Park', 'Advised by Haklae Kim'],
     awards:['Bronze Award, National Assembly Big Data Visualization Competition, Dacon Korea '],
     funded:['Individual Project for Text Mining Course']
-  },
-  {
-    id: 10,
-    title: 'Barrier Free Music Composing App',
-    shortDescription: 'Arduino + Wekniator based Facial expression capturing music composer',
-    year: '2022',
-    tag: ['AI', 'Interface', 'Individual'],
-    pdfLink: null,
-    thumbnail: '/src/thumbnail-10.gif',
-    question: 'How can we make music accessible to people with hearing loss?',
-    motivation: [{
-      label: 'Music for Individuals with Hearing Loss',
-      description: 'TPeople with hearing loss experience music through sight and touch, such as performances where lyrics are interpreted in sign language or using woofer vests that convey vibrations. Music is not limited to hearing—it can be enjoyed in diverse ways: hearing, seeing, and touching. However, the idea of individuals with hearing loss composing music remains uncommon. By embracing how they interact with music, we can explore new methods that enable everyone to create their own songs.'
-    }
-    ],
-    approach: [
-      {
-        label: 'Barrier-Free Music Composing App',
-        description: 'This project seeks to break the barriers to music composition by leveraging diverse ways to experience music. It visualizes and reinterprets music in silence, making composition accessible to all.'
-      }
-    ],
-    motivationSrc: [
-      '/src/prj10-detail-01.png',
-      '/src/prj10-detail-02.png'
-    ],
-    approachSrc: [
-    ],
-    roles: [
-      'Developed a processing application that integrates Wekinator facial signal inputs and generates outputs for Arduino-controlled vibrators and music.'
-      ],
-    credits:'',
-    awards:'',
-    funded:['Individual Project for Creative Algorithm Course'],
   },
   ];
 
