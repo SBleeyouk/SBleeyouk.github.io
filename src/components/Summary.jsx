@@ -383,7 +383,7 @@ const Summary = () => {
       </ApproachList>
       <HighlightedTextTwo onClick = {() => navigate(`/projects`)}>
         VIEW MORE PROJECTS <FiArrowUpRight />
-        </HighlightedTextTwo>
+      </HighlightedTextTwo>
     <Footer>
       <FooterText>© Copyright 2024 Saetbyeol Leeyouk<br></br>Last updated: December 13, 2024</FooterText>
     </Footer>

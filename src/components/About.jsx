@@ -93,12 +93,13 @@ const Intro = styled.p`
   font-size: 1.5rem;
   color: #2b2a2a;
   width: 100%;
-  text-align: justify;
+  text-align: left;
   span{
     color: #ff6035;
   }
   a{
     text-decoration: underline #2b2a2a 1px solid;
+    font-style: italic;
     color: #2b2a2a;
   }
   @media (max-width: 768px) {
@@ -200,7 +201,6 @@ const Image = styled.img`
 
 const ApproachDetails = styled.div`
   width: 100%;
-  height: 12rem;
   text-align: left;
   display: flex;
   flex-direction: column; /* Ensure the content stacks vertically */
@@ -214,7 +214,6 @@ const ApproachDetails = styled.div`
 
 const ApproachTitle = styled.h3`
     display: flex;
-    height: 4rem;
     flex-direction: column;
     justify-content: flex-start;
     font-size: 1.5rem;
@@ -326,7 +325,7 @@ function Projects() {
                 <Intro>
                 <span>Saetbyeol Leeyouk</span> is a Critical Technologist working at the intersection of social issues, AI engineering, and HCI research. 
                 She is currently an undergraduate research intern at <a href='https://www.kixlab.org' target="_blank" rel="noopener noreferrer">KIXLAB (KAIST Interaction Lab)</a>, pursuing a BAS in <a href='https://creative.sogang.ac.kr' target="_blank" rel="noopener noreferrer">Art & Technology</a> and a BS in Artificial Intelligence at Sogang University. 
-                <br></br><br></br>Acrossing fields as media artist and system developer, Saetbyeol is committed to addressing the risks of emerging technologies. Grounded in critical theory and feminist epistemology, she designs, develops, and deploys scalable systems that support marginalized groups, including individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities. 
+                <br></br><br></br>Raising questions as a media artist and answering them as a engineer and HCI researcher, she is dedicated to addressing the risks of emerging technologies. Grounded in critical theory and feminist epistemology, she designs, develops, and deploys scalable systems that empower marginalized groups, including <span style={{ fontStyle: 'italic', color: '#2b2a2a' }}> individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities. </span>
                 Her work explores how technology augmented self-identities can empower and embrace diverse individuals while redefining the relationship between humans and machines through a queering perspective.
                 </Intro>
                 <URLbox>
