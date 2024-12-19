@@ -8,8 +8,7 @@ const projects = [
       tag: ['AI', 'Education', 'Interface'],
       pdfLink: null,
       gitLink: 'https://github.com/SBleeyouk/sixsense',
-      thumbnail: '/src/thumbnail-01.gif ',
-      thumbnailQeustion: '/src/thumbnail-01q.png',
+      thumbnail: 'https://storage.googleapis.com/saetbyeol-images/thumbnail-01.gif',
       question: 'How can we support individuals with autism spectrum disorder for training emotional communication?',
       motivation: [{
         label: '',
@@ -40,15 +39,15 @@ const projects = [
       ],
       motivationSrc: [
         'https://www.youtube.com/embed/NLXxJixbfCA?si=E3sNHadrIll1lJC5',
-        '/src/prj01-detail-01.png',
-        '/src/prj01-detail-02.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-01.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-02.png',
       ],
       approachSrc: [
-        '/src/prj01-detail-03.png',
-        '/src/prj01-detail-04.png',
-        '/src/prj01-detail-05.jpg',
-        '/src/prj01-detail-06.jpg',
-        '/src/prj01-detail-07.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-03.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-04.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-05.jpg',
+        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-06.jpg',
+        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-07.png',
       ],
       additionalSrc: [
       ],
@@ -65,7 +64,6 @@ const projects = [
       tag: ['AI', 'Social Justice', 'Interface', 'Research'],
       pdfLink: ['http://journal.dcs.or.kr/xml/37344/37344.pdf'],
       thumbnail: '/src/thumbnail-02.png',
-      thumbnailQeustion: '/src/thumbnail-02q.png',
       question: 'Why all fairytale girls want party, while all fairytale boys fight with dragons? ',
       motivation: [{
         label: 'Every child can be the character in a fairytale!',
@@ -87,13 +85,13 @@ const projects = [
         },
       ],
       motivationSrc: [
-        '/src/prj02-detail-01.png',
-        '/src/prj02-detail-02.png',
-        '/src/prj02-detail-03.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj02-detail-01.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj02-detail-02.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj02-detail-03.png',
       ],
       approachSrc: [
-        '/src/prj02-detail-04.png',
-        '/src/prj02-detail-05.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj02-detail-04.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj02-detail-05.png',
       ],
       additionalSrc: [
       ],
@@ -110,7 +108,6 @@ const projects = [
         tag: ['AI', 'Social Justice', 'Interface', 'Research','Individual'],
         pdfLink: null,
         thumbnail: '/src/thumbnail-04.png',
-        thumbnailQeustion: '/src/thumbnail-03q.png',
         question: 'How can we support activists in dismantling the deepfake sexual crime cartel, while reducing their PTSD?',
         motivation: [{
           label: '',
@@ -141,10 +138,7 @@ const projects = [
       year: '2023',
       tag: ['AI', 'Social Justice', 'Media Art'],
       pdfLink: null,
-      thumbnail: '/src/thumbnail-03.gif',
-      thumbnailQeustion: '/src/thumbnail-04q.png',
-      mainImg: '/src/thumbnail-03.gif',
-      mainVideo: 'null',
+      thumbnail: 'https://storage.googleapis.com/saetbyeol-images/thumbnail-03.gif',
       question: "Can AI preserve and amplify civic society's collective memory of sexual slavery victims for the Japanese imperial army, after the last survivor is gone?",
       motivation: [{
         label: 'The subjects, contents, and conditions of collective memory are determined by society and are inherently subject to changes in the social environment, thus embodying a ‘reconstructive’ nature. As such, collective memory is actively reshaped through our practices of remembrance, and it plays a pivotal role in shaping our identity. (Maurice Halbwachs)\n\n',
@@ -179,8 +173,16 @@ const projects = [
       ],
       motivationSrc: [
       'https://www.youtube.com/embed/XdfdZNwphRo?si=aMBHZoXo9RwCujPW',
+      'https://storage.googleapis.com/saetbyeol-images/prj03-detail-02.png',
+      'https://storage.googleapis.com/saetbyeol-images/prj03-detail-03.png',
+      'https://storage.googleapis.com/saetbyeol-images/prj03-detail-04.png',
+      'https://storage.googleapis.com/saetbyeol-images/prj03-detail-05.png',
+      'https://storage.googleapis.com/saetbyeol-images/prj03-detail-06.png',
+      'https://storage.googleapis.com/saetbyeol-images/prj03-detail-07.png',
       ],
       approachSrc: [
+      'https://storage.googleapis.com/saetbyeol-images/prj03-detail-08.png',
+      'https://storage.googleapis.com/saetbyeol-images/prj03-detail-09.png',
       'https://www.youtube.com/embed/11ZCdRVnhwg?si=4-DOiRTXuvmgD0rV&amp;start=1446',
       ],
       roles: ['Team Lead', 'Developed AI pipeline to generate collective testimonies using real-time audience data', 'Conducted research on unrecorded victims, testimonies, and collective memory to design 3D web storytelling', 'Planned and managed a multidisciplinary team including an interface design engineer, 3D artist, backend developer, frontend developer, and floor designer'],
@@ -195,8 +197,7 @@ const projects = [
       year: '2024',
       tag: ['AI', 'Education', 'Interface'],
       gitLink: 'https://github.com/SBleeyouk/guardian-of-makers?tab=readme-ov-file',
-      thumbnail: '/src/thumbnail5.gif',
-      thumbnailQeustion: '/src/thumbnail-06q.png',
+      thumbnail: 'https://storage.googleapis.com/saetbyeol-images/thumbnail5.gif',
       question: "How can we design systems that encourage young makers to embrace failure and experiment freely?",
       motivation: [
         {
@@ -223,9 +224,9 @@ const projects = [
       'https://player.vimeo.com/video/942240615?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
       ],
       approachSrc: [
-        '/src/prj05-detail-01.png',
-        '/src/prj05-detail-02.png',
-        '/src/prj05-detail-03.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj05-detail-01.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj05-detail-02.png',
+        'https://storage.googleapis.com/saetbyeol-images/prj05-detail-03.png',
       ],
       roles:['Led AI and web development using Google Gemini API'],
       credits:['Chanwoo Lee'],
@@ -239,8 +240,7 @@ const projects = [
       year: '2022',
       tag: ['Media Art'],
       pdfLink: null,
-      thumbnail: '/src/thumbnail-07.gif',
-      thumbnailQeustion: '/src/thumbnail-07q.png',
+      thumbnail: 'https://storage.googleapis.com/saetbyeol-images/thumbnail-07.gif',
       question: 'How can XR-augmented reality reveal deeper truths about our lives?',
       motivation: [{
         label: '',
@@ -271,7 +271,6 @@ const projects = [
       tag: ['AI', 'Social Justice', 'Media Art'],
       pdfLink: null,
       thumbnail: '/src/thumbnail6.png',
-      thumbnailQeustion: '/src/thumbnail-05q.png',
       question: 'Why do future humanoid robots mimic stereotypical feminine traits, and how can we reimagine them through a queering perspective?',
       motivation: [{
         label: '',
@@ -304,9 +303,6 @@ const projects = [
     tag: ['AI', 'Interface', 'Education', 'Research'],
     pdfLink: null,
     thumbnail: '/src/thumbnail-08.png',
-    thumbnailQeustion: '/src/thumbnail-08q.png',
-    mainImg: '/src/thumbnail-08.png',
-    mainVideo: 'null',
     question: 'How can we design personalized learning paths for learners in multi-video transitioning environments?',
     motivation: [{
       label: '',
