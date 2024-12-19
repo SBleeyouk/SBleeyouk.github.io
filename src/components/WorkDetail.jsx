@@ -6,7 +6,6 @@ import CustomCursorTwo from './cursor-2';
 import projects, { getProjectById } from './projectData';
 import { FaGithub } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
-import ImageSlider from './ImageSlider';
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -48,15 +47,6 @@ const ThumbnailWrapper = styled.div`
 const Thumbnail = styled.img`
   width: 100%; /* Ensures the image fills the wrapper */
   object-fit: cover; /* Ensures the image doesn't distort */
-`;
-
-const StickyWrapper = styled.div`
-  position: sticky;
-  top: 0;
-  background-color: #f8f9fa;
-  z-index: 100; /* Ensures it stays on top of other content */
-  transition: all 0.3s ease-in-out; /* Smooth transitions for style changes */
-  box-shadow: ${(props) => (props.isScrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none')};
 `;
 
 const Intro = styled.div`
@@ -563,9 +553,6 @@ const ProjectDetail = () => {
               );
             })}
         </DetailSection>
-        {project.additionalSrc && project.additionalSrc.length > 1 && (
-        <ImageSlider sources={project.additionalSrc}/>
-      )}
       </PrjScreen>
       <NextPrjScreen
         onClick={() => handleProjectClick(nextProject.id)}

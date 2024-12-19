@@ -245,7 +245,7 @@ const Projects = () => {
     <ProjectScreen>
       <Filters>
         <FilterGroup>
-          {['ALL', 'AI', 'Social Justice', 'Education', 'Interface', 'Media Art', 'Research', 'Individual'].map((context) => {
+          {['ALL', 'AI', 'Social Justice', 'Learning', 'Interface', 'Media Art', 'Research', 'Individual'].map((context) => {
           const projectCount =
             context === 'ALL'
               ? projects.length

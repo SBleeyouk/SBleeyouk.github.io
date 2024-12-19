@@ -5,7 +5,7 @@ const projects = [
       title: 'Mujigae (Rainbow)',
       shortDescription: 'GenAI powered personalized emotion learning system for autism spectrum disorder(ASD) children',
       year: '2024',
-      tag: ['AI', 'Education', 'Interface'],
+      tag: ['AI', 'Learning', 'Interface'],
       pdfLink: null,
       gitLink: 'https://github.com/SBleeyouk/sixsense',
       thumbnail: '/src/thumbnail-01.gif',
@@ -195,7 +195,7 @@ const projects = [
       title: 'Guardian of Makers',
       shortDescription: 'Safely guide Y10-12 students to learn to try and fail via maker ed after school with Google AI',
       year: '2024',
-      tag: ['AI', 'Education', 'Interface'],
+      tag: ['AI', 'Learning', 'Interface'],
       gitLink: 'https://github.com/SBleeyouk/guardian-of-makers?tab=readme-ov-file',
       thumbnail: '/src/thumbnail-05.gif',
       question: "How can we design systems that encourage young makers to embrace failure and experiment freely?",
@@ -233,74 +233,12 @@ const projects = [
       awards:'',
       funded:['Individual Project for Google AI Hackathon'],
     },
-    {
-      id: 7,
-      title: 'the dOXr',
-      shortDescription: 'Microsoft Holo-lens based media art exploring modern existentialism',
-      year: '2022',
-      tag: ['Media Art'],
-      pdfLink: null,
-      thumbnail: '/src/thumbnail-07.gif',
-      question: 'How can XR-augmented reality reveal deeper truths about our lives?',
-      motivation: [{
-        label: '',
-        description: ''
-      }
-      ],
-      approach: [
-        {
-          label: '',
-          description: ''
-        },
-      ],
-      motivationSrc: [
-        'https://www.youtube.com/embed/bbBC4r61OWM?si=yAw7XFCclEKlRBo4&amp'
-      ],
-      approachSrc: [
-      ],
-      roles: ['Team <Efimero> Lead', 'Story & Visual Director, responsible for scene storytelling, user flow, and level design', 'Planned and managed a multidisciplinary team, including a Unity developer, 3D artist, and floor designer'],
-      credits:['Taehyun Kim', 'Jisoo Kang', 'Woojung Kim'],
-      awards: null,
-      funded:['Seoul Artists’ Platform_New&Young'],
-    },
-    {
-      id: 5,
-      title: 'Find Me',
-      shortDescription: 'GPS-based XR game fostering civic engagement through immersive storytelling of socio-political sites',
-      year: '2022',
-      tag: ['AI', 'Social Justice', 'Media Art'],
-      pdfLink: null,
-      thumbnail: '/src/thumbnail6.png',
-      question: 'Why do future humanoid robots mimic stereotypical feminine traits, and how can we reimagine them through a queering perspective?',
-      motivation: [{
-        label: '',
-        description: ''
-      }
-      ],
-      approach: [
-        {
-          label: '',
-          description: ''
-        },
-      ],
-      motivationSrc: [
-      ],
-      approachSrc: [
-      ],
-      roles: [
-        'Led research and narrative design for a science fiction game exploring the reproduction of gender bias in AI-humanoid robotics, integrating the story with game architecture, user flow, and level design',
-        'Directed the design and development of a GPS-based interactive XR game using Unity'
-      ],
-      credits:['Dabin Yoo', 'Woosuk Shin', 'Changyup Oh', 'Dagun Yoo'],
-      awards:['Silver Award, Global Indie Game Development Contest, Korea Game Developer Association'],
-      funded:['SYK Grant','National Research Foundation(NRF)'],
-    },
   {
     id: 8,
     title: 'Video Digest: Personalizing Instructional Video Viewing',
     shortDescription: 'KIXLAB undergraduate internship project',
     year: '2024',
-    tag: ['AI', 'Interface', 'Education', 'Research'],
+    tag: ['AI', 'Interface', 'Learning', 'Research'],
     pdfLink: null,
     thumbnail: '/src/thumbnail-08.png',
     question: 'How can we design personalized learning paths for learners in multi-video transitioning environments?',
@@ -359,6 +297,139 @@ const projects = [
     credits:['Haram Park', 'Advised by Haklae Kim'],
     awards:['Bronze Award, National Assembly Big Data Visualization Competition, Dacon Korea '],
     funded:['Individual Project for Text Mining Course']
+  },
+  {
+    id: 10,
+    title: 'Barrier Free Music Composing App',
+    shortDescription: 'Arduino + Wekniator based Facial expression capturing music composer',
+    year: '2022',
+    tag: ['AI', 'Interface', 'Individual'],
+    pdfLink: null,
+    thumbnail: '/src/thumbnail-10.gif',
+    question: 'How can we make music accessible to people with hearing loss?',
+    motivation: [{
+      label: 'Music for Individuals with Hearing Loss',
+      description: 'TPeople with hearing loss experience music through sight and touch, such as performances where lyrics are interpreted in sign language or using woofer vests that convey vibrations. Music is not limited to hearing—it can be enjoyed in diverse ways: hearing, seeing, and touching. However, the idea of individuals with hearing loss composing music remains uncommon. By embracing how they interact with music, we can explore new methods that enable everyone to create their own songs.'
+    }
+    ],
+    approach: [
+      {
+        label: 'Barrier-Free Music Composing App',
+        description: 'This project seeks to break the barriers to music composition by leveraging diverse ways to experience music. It visualizes and reinterprets music in silence, making composition accessible to all.'
+      }
+    ],
+    motivationSrc: [
+      '/src/prj10-detail-01.png',
+      '/src/prj10-detail-02.png'
+    ],
+    approachSrc: [
+    ],
+    roles: [
+      'Developed a processing application that integrates Wekinator facial signal inputs and generates outputs for Arduino-controlled vibrators and music.'
+      ],
+    credits:'',
+    awards:'',
+    funded:['Individual Project for Creative Algorithm Course'],
+  },
+  {
+    id: 7,
+    title: 'the dOXr',
+    shortDescription: 'Microsoft Holo-lens based media art exploring modern existentialism',
+    year: '2022',
+    tag: ['Media Art'],
+    pdfLink: null,
+    thumbnail: '/src/thumbnail-07.gif',
+    question: 'How can XR-augmented reality reveal deeper truths about our lives?',
+    motivation: [{
+      label: '',
+      description: 'Inspired by Myth of Sisyphus, this XR media art explores how XR can expand the philosophy of nihilism while questioning the purpose of function and the value of existence in a capitalist society. In the repetitive cycles of daily life, how can we find meaning? Can XR, as a medium that layers reality with new dimensions, reveal deeper truths about the essence of life?'
+    }
+    ],
+    approach: [
+      {
+        label: '',
+        description: 'Using MS HoloLens, participants must solve missions to escape the "Age of Loss." The experience presents 3D sculptures, objects, and sounds—all devoid of inherent meaning or function. Participants encounter surreal elements like Sisyphus, a cup that cannot hold water, a fish with legs, and a desk incapable of supporting books. These absurd objects challenge the participant’s perception of purpose and invite them to confront existential questions through an immersive XR environment.'
+      },
+    ],
+    motivationSrc: [
+      '/src/prj07-detail-00.jpg',
+      '/src/prj07-detail-01.jpg',
+      '/src/prj07-detail-02.png',
+      '/src/prj07-detail-03.png',
+      '/src/prj07-detail-04.png',
+      '/src/prj07-detail-05.png',
+      '/src/prj07-detail-06.png',
+    ],
+    approachSrc: [
+      'https://www.youtube.com/embed/bbBC4r61OWM?si=yAw7XFCclEKlRBo4&amp'
+    ],
+    roles: ['Team <Efimero> Lead', 'Story & Visual Director, responsible for scene storytelling, user flow, and level design', 'Planned and managed a multidisciplinary team, including a Unity developer, 3D artist, and floor designer'],
+    credits:['Taehyun Kim', 'Jisoo Kang', 'Woojung Kim'],
+    awards: null,
+    funded:['Seoul Artists’ Platform_New&Young'],
+  },
+  {
+    id: 5,
+    title: 'Find Me',
+    shortDescription: 'GPS-based XR game fostering civic engagement through immersive storytelling of socio-political sites',
+    year: '2022',
+    tag: ['AI', 'Social Justice', 'Media Art'],
+    pdfLink: null,
+    thumbnail: '/src/thumbnail-06.png',
+    question: 'Why do future humanoid robots mimic stereotypical feminine traits, and how can we reimagine them through a queering perspective?',
+    motivation: [{
+      label: 'XRpolis ',
+      description: 'explores the hidden stories of marginalized groups in urban spaces through an engaging AR game. By layering augmented reality onto real-world locations, XRpolis aims to shed light on the unseen facets of cities, transforming them into immersive narratives. The ultimate goal is to pioneer a game-based AR social platform that lowers the barriers to civic engagement.'
+    },
+    {
+      label:'',
+      description:'Traditionally, social participation has required significant effort and understanding, often confined to protests, campaigns, or specialized advocacy. XRpolis, however, brings social issues closer to people’s everyday lives through the accessible and enjoyable medium of AR gaming. By integrating interactive storytelling, the project fosters empathy and raises awareness of pressing societal problems in a fun, relatable way.',
+    },
+    {
+      label:'Our first game location is Seoul City Hall',
+      description:'a site that annually hosts the Seoul Queer Parade. This choice honors the symbolic significance of the space while weaving a futuristic narrative that reflects real-world issues. Although set in a distant future, the game’s elements mirror challenges faced today. Through the lens of science fiction, XRpolis questions societal norms, such as the perceived "naturalness" of heterosexual love or the stereotypical portrayal of AI robots as calm and gentle women.',
+    },
+    {
+      label:'',
+      description:'By sparking critical thought and dialogue, XRpolis invites players to reflect on these norms, ultimately broadening discussions beyond the game and into the real world. This project reimagines how games can inspire meaningful social conversations and civic action.',
+    }
+    ],
+    approach: [
+      {
+        label: 'Queering Perspectives on Humanoid Robots',
+        description: 'This research employs two strategies to expand the conventional narratives of queerness. First, the story is set in the year 2050, centering on the love between a human woman and an AI represented as a woman. By exploring the relationship between a human and a "female-representing" robot, the narrative highlights that queerness is not solely about human sexual identity but also about how gender is represented in society.'
+      },
+      {
+        label: '',
+        description:'Second, a supplementary storyline in the game depicts the cognitive development of an AI humanoid robot. Represented as a woman, the robot replaces human labor yet remains fully subjugated and denied citizenship. The story portrays how this robot becomes aware of the "system of exclusion" in society. Ultimately, through the love between the protagonist, Harriet, and the humanoid robot, the narrative challenges societal structures of exclusion, questioning the systemic responsibility for the marginalization of women and queer individuals.',
+      },
+      {
+        label:'AR Gameplay: <Find Me>',
+        description:'Using the Unity engine, the game <Find Me> features six AR scenes, each tied to a specific location around Seoul City Hall. GPS tracking, enabled by AR Location, identifies the player`s position and activates AR interactions specific to that site. Players solve missions at key spots, uncovering hints that guide them to the next location and mission.'
+      },
+      {
+        label:'',
+        description:'At each site, the player’s GPS coordinates trigger augmented objects that can be manipulated—such as being picked up or rotated—to reveal clues. These interactive AR elements are central to solving the missions and progressing through the game. By linking real-world locations to immersive storytelling, "Find Me" creates a dynamic and engaging experience for players.'
+      }
+    ],
+    motivationSrc: [
+      'https://storage.googleapis.com/saetbyeol-images/prj06-detail-01.png',
+      'https://storage.googleapis.com/saetbyeol-images/prj06-detail-02.png',
+      'https://storage.googleapis.com/saetbyeol-images/prj06-detail-03.png',
+      'https://storage.googleapis.com/saetbyeol-images/prj06-detail-04.png'
+    ],
+    approachSrc: [
+      'https://www.youtube.com/embed/TVG1O2Yh4fc?si=QWFudHgYuwFzzuex&amp;start=1',
+      'https://storage.googleapis.com/saetbyeol-images/prj06-detail-05.png'
+    ],
+    roles: [
+      'Team Lead',
+      'Led research and narrative design for a science fiction game exploring the reproduction of gender bias in AI-humanoid robotics, integrating the story with game architecture, user flow, and level design',
+      'Directed the design and development of a GPS-based interactive XR game using Unity'
+    ],
+    credits:['Dabin Yoo', 'Woosuk Shin', 'Changyup Oh', 'Dagun Yoo'],
+    awards:['Silver Award, Global Indie Game Development Contest, Korea Game Developer Association'],
+    funded:['SYK Grant','National Research Foundation(NRF)'],
   },
   ];
 
