@@ -66,7 +66,7 @@ const Intro = styled.p`
   color: #2b2a2a;
   margin-bottom: 1rem; /* Add consistent spacing */
   width: 100%;
-  text-align: justify;
+  text-align: left;
 
   span{
     color: #ff6035;
