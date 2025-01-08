@@ -276,7 +276,7 @@ const Summary = () => {
     const [approaches] = useState([
         {
         id: 1,
-        title: 'Speculate Utopia',
+        title: 'For Speculative Utopia',
         description: "What does the ultimate 'good' future look like? By starting with imagination, I identify gaps between current realities, imaginable futures, and ideal futures to bridge between practical challenges and holistic approach.",
         gif: 'src/approach01.png',
         staticImage: 'src/approach01-bf.png',
@@ -287,8 +287,8 @@ const Summary = () => {
         },
         {
           id: 2,
-          title: 'Research Through Marginalized Perspectives',
-          description: 'Individuals, excluded from mainstream narratives, hold creative and alternative visions for the future. My approach focuses on translating their imaginations, solutions, and methodologies into scalable, impactful systems.',
+          title: 'By Centering Marginalized',
+          description: 'I center the lived experiences of marginalized groups, recognizing them as both the clearest reflections of systemic gaps and the most creative visionaries for innovation. My approach focuses on translating their imaginations, solutions, and methodologies into scalable, impactful systems.',
           gif: 'src/approach02.png',
           staticImage: 'src/approach02-bf.png',
           questions: [
@@ -298,8 +298,8 @@ const Summary = () => {
           },
           {
             id: 3,
-            title: 'Build Scalable Systems and Measure Impact',
-            description: 'Uncover and deconstruct the hidden math and algorithms driving rapid changing technology. Building on this understanding, I pose critical questions, develop alternative systems, and evaluate their potential.',
+            title: 'Through Scalable System',
+            description: 'Uncover and deconstruct the hidden bias behind algorithms. Through participatory design, I transform marginalized communities’ qualitative data—stories, emotions, and experiences—into algorithms and systems. Scaling these systems to meet their needs embodies universally adaptable system.',
             gif: 'src/approach03.png',
             staticImage: 'src/approach03-bf.png',
             questions: [

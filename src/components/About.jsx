@@ -271,14 +271,24 @@ export const FooterText = styled.p`
     font-size: 0.8rem;
 `
 
+const DetailItem = styled.div`
+  display: inline-block;
+  text-align: center;
+  wdith: 100%;
+
+  img, video {
+    border-radius: 8px;
+  }
+`;
+
 function Projects() {
   const [hoveredApproachId, setHoveredApproachId] = useState(null);
   const [isPopupHovered, setIsPopupHovered] = useState(false);
   const [approaches] = useState([
             {
             id: 1,
-            title: 'Speculate Utopia',
-            description: "What does the ultimate 'good' future look like? By starting with imagination, I identify gaps between current realities, imaginable futures, and ideal futures. This approach bridges practical needs with holistic thinking, considering the project's context and techniques to address its challenges.",
+            title: 'For Speculative Utopia',
+            description: "What does the ultimate 'good' future look like? By starting with imagination, I identify gaps between current realities, imaginable futures, and ideal futures. This approach bridges practical needs with holistic thinking. On this gap, I design and build tech societies that prioritize equity and sustainability over profit and exclusion.",
             gif: 'src/approach01.png',
             staticImage: 'src/approach01.png',
             questions: [
@@ -288,8 +298,8 @@ function Projects() {
             },
             {
               id: 2,
-              title: 'Research Through Marginalized Perspectives',
-              description: 'I tackle complex technological challenges by centering marginalized voices. Individuals excluded from mainstream narratives hold creative and alternative visions for the future. I translate their imaginations, solutions, and methodologies into scalable, impactful systems.',
+              title: 'By Centering Marginalized',
+              description: 'I center the lived experiences of marginalized groups, recognizing them as both the clearest reflections of systemic gaps and the most creative visionaries for innovation. I translate their imaginations, solutions, and methodologies into scalable, impactful systems.',
               gif: 'src/approach02.png',
               staticImage: 'src/approach02.png',
               questions: [
@@ -299,8 +309,8 @@ function Projects() {
               },
               {
                 id: 3,
-                title: 'Build Scalable Systems and Measure Impact',
-                description: 'In the rapidly changing landscape of technology, I uncover and deconstruct the hidden math and algorithms driving it. Building on this understanding, I pose critical questions, develop alternative systems, and evaluate their potential as viable alternatives to existing technologies.',
+                title: 'Through Scalable System',
+                description: 'In the rapidly changing landscape of technology, I uncover and deconstruct the hidden bias behind algorithms driving it. Through participatory design, I transform marginalized communities’ qualitative data—stories, emotions, and experiences—into algorithms and systems. Scaling these systems to meet their needs embodies universally adaptable design.',
                 gif: 'src/approach03.png',
                 staticImage: 'src/approach03.png',
                 questions: [
@@ -337,6 +347,9 @@ function Projects() {
               </IntroBox>
           </AboutInfoProfile>
         <Title>Research Approach</Title>
+        <DetailItem>
+          <img src='/src/approach-overview.png' width="60%" />
+        </DetailItem>
         <ApproachList
         isPopupHovered={false}
         style={{ cursor: isPopupHovered ? 'none' : 'default' }}
