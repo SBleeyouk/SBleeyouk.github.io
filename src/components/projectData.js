@@ -39,13 +39,13 @@ const projects = [
       ],
       motivationSrc: [
         'https://www.youtube.com/embed/NLXxJixbfCA?si=E3sNHadrIll1lJC5',
-        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-01.png',
-        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-02.png',
+        '/src/prj01-ppt-01.png',
+        '/src/prj01-ppt-02.png',
+        '/src/prj01-ppt-03.png',
       ],
       approachSrc: [
         'https://storage.googleapis.com/saetbyeol-images/prj01-detail-03.png',
         'https://storage.googleapis.com/saetbyeol-images/prj01-detail-04.png',
-        'https://storage.googleapis.com/saetbyeol-images/prj01-detail-05.jpg',
         'https://storage.googleapis.com/saetbyeol-images/prj01-detail-06.jpg',
         'https://storage.googleapis.com/saetbyeol-images/prj01-detail-07.png',
       ],
@@ -121,6 +121,7 @@ const projects = [
           },
         ],
         motivationSrc: [
+          '/src/prj04-ppt-01.png'
 
         ],
         approachSrc: [
@@ -173,6 +174,7 @@ const projects = [
       ],
       motivationSrc: [
       'https://www.youtube.com/embed/XdfdZNwphRo?si=aMBHZoXo9RwCujPW',
+      '/src/prj03-ppt-01.png',
       'https://storage.googleapis.com/saetbyeol-images/prj03-detail-02.png',
       'https://storage.googleapis.com/saetbyeol-images/prj03-detail-03.png',
       'https://storage.googleapis.com/saetbyeol-images/prj03-detail-04.png',
@@ -181,6 +183,7 @@ const projects = [
       'https://storage.googleapis.com/saetbyeol-images/prj03-detail-07.png',
       ],
       approachSrc: [
+      '/src/prj03-ppt-03.png',
       'https://storage.googleapis.com/saetbyeol-images/prj03-detail-08.png',
       'https://storage.googleapis.com/saetbyeol-images/prj03-detail-09.png',
       'https://www.youtube.com/embed/11ZCdRVnhwg?si=4-DOiRTXuvmgD0rV&amp;start=1446',
@@ -413,8 +416,9 @@ const projects = [
       }
     ],
     motivationSrc: [
+      '/src/prj06-ppt-01.png',
+      '/src/prj06-ppt-02.png',
       'https://storage.googleapis.com/saetbyeol-images/prj06-detail-01.png',
-      'https://storage.googleapis.com/saetbyeol-images/prj06-detail-02.png',
       'https://storage.googleapis.com/saetbyeol-images/prj06-detail-03.png',
       'https://storage.googleapis.com/saetbyeol-images/prj06-detail-04.png'
     ],
