@@ -90,7 +90,7 @@ const IntroBox = styled.div`
 const Intro = styled.p`
   font-family: 'PP Neue Montreal', sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #2b2a2a;
   width: 100%;
   text-align: left;
