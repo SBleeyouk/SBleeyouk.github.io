@@ -331,16 +331,19 @@ function Projects() {
       <Header variant="white" />
       <AboutInfo>
             <AboutInfoProfile>
-              <Profile src="src/profile-2.jpg" alt="Profile Image" />
+              <Profile src="src/saetbyeol-profile-bw-3_4.png" alt="Profile Image" />
               <IntroBox>
                 <Intro>
-                <span>Saetbyeol Leeyouk</span> is a Critical Technologist working at the intersection of social issues, AI engineering, and HCI research. 
-                She is currently an undergraduate research intern at <a href='https://www.kixlab.org' target="_blank" rel="noopener noreferrer">KIXLAB (KAIST Interaction Lab)</a>, pursuing a BAS in <a href='https://creative.sogang.ac.kr' target="_blank" rel="noopener noreferrer">Art & Technology</a> and a BS in Artificial Intelligence at Sogang University. 
-                <br></br><br></br>Raising questions as a media artist and answering them as a engineer and HCI researcher, she is dedicated to addressing the risks of emerging technologies. Grounded in critical theory and feminist epistemology, she designs, develops, and deploys scalable systems that empower marginalized groups, including <span style={{ fontStyle: 'italic', color: '#2b2a2a' }}> individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities. </span>
-                Her work explores how technology augmented self-identities can empower and embrace diverse individuals while redefining the relationship between humans and machines through a queering perspective.
+                <span>Saetbyeol Leeyouk</span> is a Critical Technologist working at the intersection of ethics and politics of computation, AI engineering, and Human-Computer Interaction (HCI).
+                She is a Graduate student and researcher at the <a href='https://www.media.mit.edu/groups/critical-matter/overview/' target="_blank" rel="noopener noreferrer">MIT Media Lab, Critical Matter Group</a>.
+                <br></br><br></br>She works across media art and engineering, using creative inquiry and technical design to explore the social risks of emerging technologies. 
+                Grounded in critical theory and participatory design, her research centers marginalized communities and builds inclusive, scalable systems for Human-AI interaction. 
+                She has collaborated with <span style={{ fontStyle: 'italic', color: '#2b2a2a' }}> autistic children, survivors of deepfake sexual violence, and underrepresented groups in current LLM systems </span>—translating their experiences into interactive systems and algorithmic tools.
+                <br></br><br></br>Prior to joining the Media Lab, she earned a bachelor’s degree in <a href='https://creative.sogang.ac.kr/' target="_blank" rel="noopener noreferrer">Art & Technology</a> and AI from Sogang University. 
+                She was an undergraduate researcher at the <a href='https://www.kixlab.org/' target="_blank" rel="noopener noreferrer">KAIST Interaction Lab</a>  and the <a href='https://cstlab.org/' target="_blank" rel="noopener noreferrer">KAIST Collaborative Social Technologies Lab</a>, and participated in the Smilegate AI Membership Program.
                 </Intro>
                 <URLbox>
-                  <URL href='mailto:sbleeyouk@sogang.ac.kr' target="_blank" rel="noopener noreferrer"><MdEmail /></URL>
+                  <URL href='mailto:sbleeyuk@mit.edu' target="_blank" rel="noopener noreferrer"><MdEmail /></URL>
                   <URL href='https://github.com/SBleeyouk' target="_blank" rel="noopener noreferrer"><FaGithub /></URL>
                   <URL href='https://www.linkedin.com/in/sbleeyouk' target="_blank" rel="noopener noreferrer"><FaLinkedin/></URL>
                 </URLbox>
@@ -399,7 +402,7 @@ function Projects() {
         </CollaboItem>
       </AboutInfo>
       <CVFrame
-          src="https://drive.google.com/file/d/1mwWmZUPnC143_vt-6B6l4Za7M1qq5Nuv/preview" allow="autoplay">
+          src="https://drive.google.com/file/d/1xuNEbOCEkSHgSDbTS9POFDWDgQTFKORP/preview" allow="autoplay">
         </CVFrame>
     <Footer>
       <FooterText>© Copyright 2024 Saetbyeol Leeyouk<br></br>Last updated: December 13, 2024</FooterText>

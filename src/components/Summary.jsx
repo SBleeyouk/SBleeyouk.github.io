@@ -317,8 +317,8 @@ const Summary = () => {
         <BigTitle>Question + Create technology as a force for justice</BigTitle>
         <IntroBox>
             <Intro>
-            Saetbyeol Leeyouk is a <span>Critical Technologist</span> bridging social issues, AI engineering, and HCI research. As a media artist and system developer, she builds scalable systems to empower marginalized groups <span style={{ fontStyle: 'none', fontWeight: '300', color: '#757474' }}>- individuals with disabilities, victims of deepfake sexual crimes, and underrepresented identities -</span> and redefine human - machine relationships through critical and inclusive perspectives.
-            <br></br><br></br>She is currently an undergraduate research intern at <a href='https://www.kixlab.org' target="_blank" rel="noopener noreferrer">KIXLAB (KAIST Interaction Lab)</a>, <br></br>pursuing a BAS in <a href='https://creative.sogang.ac.kr' target="_blank" rel="noopener noreferrer">Art & Technology</a> and a BS in Artificial Intelligence at Sogang University.
+            Saetbyeol Leeyouk is a <span>Critical Technologist</span> working at the intersection of ethics and politics of computation, AI engineering, and Human-Computer Interaction (HCI). As a media artist and HCI researcher, she builds scalable systems to empower marginalized groups <span style={{ fontStyle: 'none', fontWeight: '300', color: '#757474' }}>- individuals with disabilities, survivors of deepfake sexual crimes, and underrepresented identities -</span> and redefine human - machine relationships through critical and inclusive perspectives.
+            <br></br><br></br>She is a Graduate student and researcher at the <a href='https://www.media.mit.edu/groups/critical-matter/overview/' target="_blank" rel="noopener noreferrer">MIT Media Lab, Critical Matter Group</a>.
             </Intro>
         </IntroBox>
     </IntroSection>
